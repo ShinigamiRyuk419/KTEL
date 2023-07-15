@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>KTEL | Our Teachers</title>
+    <style>
+        .firstDiv {
+            height: auto;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .firstDiv h1 {
+            text-align: center;
+            margin: 0;
+            font-size: 25pt;
+            font-weight: 600;
+        }
+
+        .firstDiv p {
+            text-align: center;
+        }
+
+        .boxTeach {
+            grid-column: 2 / span 12;
+            display: grid;
+            grid-template-columns: repeat(12, minmax(auto, 60px));
+            grid-gap: 40px;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 0;
+        }
+
+        .cardTeach {
+            grid-column-end: span 4;
+            display: flex;
+            flex-direction: column;
+            background-color: #39393b;
+            cursor: pointer;
+            transition: all 0.3s ease 0s;
+            background-color: rgb(234, 228, 229);
+            box-shadow: 1px 1px 5px rgba(216, 29, 65, 1);
+            /* justify-content: center;
+            align-items: center; */
+            /* margin: 20px;
+            width: 300px;
+            height: fit-content;
+            background-color: rgb(234, 228, 229);
+            box-shadow: 1px 1px 5px rgba(216, 29, 65, 1); */
+        }
+
+        .cardTeach:hover {
+            transform: translateY(-7px);
+        }
+
+        .cardTeach .circle{
+            margin: auto;
+            padding: 30px;
+            
+        }
+        .cardTeach .circle img {
+            /* margin-left: 110px; */
+            margin-top: 5%;
+            width: 142px;
+            height: 142px;
+            border-radius: 50%;
+            box-shadow: 0 1px 2px rgba(51, 71, 255, 1);
+        }
+
+        .name {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: black;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 10pt;
+            line-height: 27px;
+            /* text-shadow: 5px 5px 3px black; */
+        }
+
+        .pos {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: black;
+            text-transform: capitalize;
+            font-weight: 400;
+            font-size: 16px;
+            padding: 5px;
+            /* text-shadow: 5px 5px 3px black; */
+        }
+
+        .cardTeach hr {
+            border-top: 2px solid skyblue;
+            margin: 20px;
+        }
+
+        .cardTeach .Icons {
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .cardTeach .Icons img {
+            height: 20px;
+        }
+
+        @media only screen and (max-width: 1000px) {
+            .cardTeach {
+                grid-column-end: span 6;
+            }
+        }
+
+        @media only screen and (max-width: 700px) {
+            .boxTeach {
+                grid-gap: 20px;
+            }
+
+            .cardTeach {
+                grid-column-end: span 12;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            /* .boxTeach {
+                grid-template-columns: 10px repeat(6, 1fr) 10px;
+                grid-gap: 10px;
+            } */
+
+            .boxTeach {
+                grid-column: 2 / span 6;
+                grid-template-columns: repeat(6, 1fr);
+                grid-gap: 20px;
+            }
+
+            .cardTeach {
+                grid-column-end: span 6;
+            }
+        }
+
+        .end{
+            height: auto;
+            width: 100%;
+            display: flex;
+        }
+        .cardEnd1{
+            margin-top:100px;
+            margin-left: 100px;
+        }
+        .cardEnd1 h1{
+            text-align: left;
+            justify-self: center;
+        }
+        .cardEnd1 button{
+            height: 40px;
+            width: 50%;
+            text-align: center;
+            margin-top: 20px;
+            background-color: rgba(216, 29, 65, 1);
+            border-radius: 10px;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        @media only screen and (max-width: 1000px) {
+            .cardEnd2 {
+                display: none;
+            }
+            .cardEnd1{
+            margin-top:10px;
+            margin-left: 30px;
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/KTEL-logo-removebg-preview.png" alt="">
+            </a>
+
+        </div>
+        <div class="conNav">
+            <ul class="nav-links">
+                <li><a href="aboutUs.html">About Us</a></li>
+                <li class="dropbtn"><a href="">Services</a>
+                    <i class="fa fa-caret-down"></i>
+                    <div class="dropdown-content">
+                        <a href="#">Packages</a>
+                        <a href="#">Language Tutorial Services</a>
+                        <a href="#">Services Pricing</a>
+                    </div>
+                </li>
+                <li class="dropbtn"><a href="">How it Works</a>
+                    <i class="fa fa-caret-down"></i>
+                    <div class="dropdown-content">
+                        <a href="#">How to Pay</a>
+                    </div>
+                </li>
+                <li><a href="teacher.html">Our Teachers</a></li>
+                <li><a href="testimonial.html">Testimonials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="register.html"><button>Login/Register</button></a></li>
+            </ul>
+            <div class="burger">
+                <div class="ham-burger"></div>
+            </div>
+        </div>
+
+
+    </nav>
+
+    <!-- End of Navigation -->
+    <section>
+        <div class="banner">
+            <img src="img/teacherBanner.png" alt="">
+            <div class="centered">
+                <h1>Our Teachers.</h1>
+                <h3>Your learning buddy!</h3><br>
+            </div>
+        </div>
+
+        <div class="firstDiv">
+            <h1><b style="color: rgba(0, 97, 10, 1);">Meet</b> <b style="color: rgba(218, 50, 75, 1)">Our</b> <b
+                    style="color: rgba(39, 159, 214, 1)">Dedicated</b> <b
+                    style="color: rgba(105, 62, 151, 1)">Teachers</b></h1>
+            <p> Let your Kids learn with us!</p>
+        </div>
+        <!-- Cards List of all Teachers -->
+        <div class="boxTeach">
+            <div class="cardTeach">
+                <div class="circle">
+                    <img src="img/Ellipse 512.png" alt="">
+                </div>
+                <span class="name">
+                    Junnalyn Doning
+                </span>
+                <span class="pos">Teacher</span>
+                <hr>
+                <div class="Icons">
+                    <a href="https://www.facebook.com/"><img
+                            src="https://cdn.iconscout.com/icon/free/png-256/free-facebook-logo-2019-1597680-1350125.png"
+                            alt=""></a>
+                    <a href="https://www.instagram.com/accounts/login"><img
+                            src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png"
+                            alt=""></a>
+                    <a href="https://twitter.com/"><img
+                            src="https://cdn.iconscout.com/icon/free/png-256/free-twitter-1865886-1581902.png"
+                            alt=""></a>
+                    <a href="https://mail.google.com/mail/u/0/#inbox"><img
+                            src="https://icon-library.com/images/icon-email/icon-email-5.jpg" alt=""></a>
+
+                </div>
+            </div>
+            <div class="cardTeach">
+                <div class="circle">
+                    <img src="https://fortnite.gg/img/items/8021/icon.png?4" alt="">
+                </div>
+                <span class="name">
+                    Mary Grace Vellina
+                </span>
+                <span class="pos">Teacher</span>
+                <hr>
+                <div class="Icons">
+                    <a href="https://www.facebook.com/"><img
+                            src="https://cdn.iconscout.com/icon/free/png-256/free-facebook-logo-2019-1597680-1350125.png"
+                            alt=""></a>
+                    <a href="https://www.instagram.com/accounts/login"><img
+                            src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png"
+                            alt=""></a>
+                    <a href="https://twitter.com/"><img
+                            src="https://cdn.iconscout.com/icon/free/png-256/free-twitter-1865886-1581902.png"
+                            alt=""></a>
+                    <a href="https://mail.google.com/mail/u/0/#inbox"><img
+                            src="https://icon-library.com/images/icon-email/icon-email-5.jpg" alt=""></a>
+                </div>
+            </div>
+            <div class="cardTeach">
+                <div class="circle">
+                    <img src="https://easydrawingguides.com/wp-content/uploads/2017/05/how-to-draw-naruto-20.png" alt="">
+                </div>
+                <span class="name">
+                    Ignacio Yurag
+                </span>
+                <span class="pos">Teacher</span>
+                <hr>
+                <div class="Icons">
+                    <a href="https://www.facebook.com/"><img
+                            src="https://cdn.iconscout.com/icon/free/png-256/free-facebook-logo-2019-1597680-1350125.png"
+                            alt=""></a>
+                    <a href="https://www.instagram.com/accounts/login"><img
+                            src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png"
+                            alt=""></a>
+                    <a href="https://twitter.com/"><img
+                            src="https://cdn.iconscout.com/icon/free/png-256/free-twitter-1865886-1581902.png"
+                            alt=""></a>
+                    <a href="https://mail.google.com/mail/u/0/#inbox"><img
+                            src="https://icon-library.com/images/icon-email/icon-email-5.jpg" alt=""></a>
+                </div>
+            </div>
+            <div class="cardTeach">
+                <div class="circle">
+                    <img src="img/Ellipse 512.png" alt="">
+                </div>
+                <span class="name">
+                    Junnalyn Doning
+                </span>
+                <span class="pos">Teacher</span>
+                <hr>
+                <div class="Icons">
+                    <a href="https://www.facebook.com/"><img
+                            src="https://cdn.iconscout.com/icon/free/png-256/free-facebook-logo-2019-1597680-1350125.png"
+                            alt=""></a>
+                    <a href="https://www.instagram.com/accounts/login"><img
+                            src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png"
+                            alt=""></a>
+                    <a href="https://twitter.com/"><img
+                            src="https://cdn.iconscout.com/icon/free/png-256/free-twitter-1865886-1581902.png"
+                            alt=""></a>
+                    <a href="https://mail.google.com/mail/u/0/#inbox"><img
+                            src="https://icon-library.com/images/icon-email/icon-email-5.jpg" alt=""></a>
+
+                </div>
+            </div>
+            <div class="cardTeach">
+                <div class="circle">
+                    <img src="img/Ellipse 512.png" alt="">
+                </div>
+                <span class="name">
+                    Mary Grace Vellina
+                </span>
+                <span class="pos">Teacher</span>
+                <hr>
+                <div class="Icons">
+                    <a href="https://www.facebook.com/"><img
+                            src="https://cdn.iconscout.com/icon/free/png-256/free-facebook-logo-2019-1597680-1350125.png"
+                            alt=""></a>
+                    <a href="https://www.instagram.com/accounts/login"><img
+                            src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png"
+                            alt=""></a>
+                    <a href="https://twitter.com/"><img
+                            src="https://cdn.iconscout.com/icon/free/png-256/free-twitter-1865886-1581902.png"
+                            alt=""></a>
+                    <a href="https://mail.google.com/mail/u/0/#inbox"><img
+                            src="https://icon-library.com/images/icon-email/icon-email-5.jpg" alt=""></a>
+                </div>
+            </div>
+            <div class="cardTeach">
+                <div class="circle">
+                    <img src="img/Ellipse 512.png" alt="">
+                </div>
+                <span class="name">
+                    Ignacio Yurag
+                </span>
+                <span class="pos">Teacher</span>
+                <hr>
+                <div class="Icons">
+                    <a href="https://www.facebook.com/"><img
+                            src="https://cdn.iconscout.com/icon/free/png-256/free-facebook-logo-2019-1597680-1350125.png"
+                            alt=""></a>
+                    <a href="https://www.instagram.com/accounts/login"><img
+                            src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png"
+                            alt=""></a>
+                    <a href="https://twitter.com/"><img
+                            src="https://cdn.iconscout.com/icon/free/png-256/free-twitter-1865886-1581902.png"
+                            alt=""></a>
+                    <a href="https://mail.google.com/mail/u/0/#inbox"><img
+                            src="https://icon-library.com/images/icon-email/icon-email-5.jpg" alt=""></a>
+                </div>
+            </div>
+            <div class="cardTeach">
+                <div class="circle">
+                    <img src="img/Ellipse 512.png" alt="">
+                </div>
+                <span class="name">
+                    Junnalyn Doning
+                </span>
+                <span class="pos">Teacher</span>
+                <hr>
+                <div class="Icons">
+                    <a href="https://www.facebook.com/"><img
+                            src="https://cdn.iconscout.com/icon/free/png-256/free-facebook-logo-2019-1597680-1350125.png"
+                            alt=""></a>
+                    <a href="https://www.instagram.com/accounts/login"><img
+                            src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png"
+                            alt=""></a>
+                    <a href="https://twitter.com/"><img
+                            src="https://cdn.iconscout.com/icon/free/png-256/free-twitter-1865886-1581902.png"
+                            alt=""></a>
+                    <a href="https://mail.google.com/mail/u/0/#inbox"><img
+                            src="https://icon-library.com/images/icon-email/icon-email-5.jpg" alt=""></a>
+
+                </div>
+            </div>
+            <div class="cardTeach">
+                <div class="circle">
+                    <img src="img/Ellipse 512.png" alt="">
+                </div>
+                <span class="name">
+                    Mary Grace Vellina
+                </span>
+                <span class="pos">Teacher</span>
+                <hr>
+                <div class="Icons">
+                    <a href="https://www.facebook.com/"><img
+                            src="https://cdn.iconscout.com/icon/free/png-256/free-facebook-logo-2019-1597680-1350125.png"
+                            alt=""></a>
+                    <a href="https://www.instagram.com/accounts/login"><img
+                            src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png"
+                            alt=""></a>
+                    <a href="https://twitter.com/"><img
+                            src="https://cdn.iconscout.com/icon/free/png-256/free-twitter-1865886-1581902.png"
+                            alt=""></a>
+                    <a href="https://mail.google.com/mail/u/0/#inbox"><img
+                            src="https://icon-library.com/images/icon-email/icon-email-5.jpg" alt=""></a>
+                </div>
+            </div>
+            <div class="cardTeach">
+                <div class="circle">
+                    <img src="img/Ellipse 512.png" alt="">
+                </div>
+                <span class="name">
+                    Ignacio Yurag
+                </span>
+                <span class="pos">Teacher</span>
+                <hr>
+                <div class="Icons">
+                    <a href="https://www.facebook.com/"><img
+                            src="https://cdn.iconscout.com/icon/free/png-256/free-facebook-logo-2019-1597680-1350125.png"
+                            alt=""></a>
+                    <a href="https://www.instagram.com/accounts/login"><img
+                            src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png"
+                            alt=""></a>
+                    <a href="https://twitter.com/"><img
+                            src="https://cdn.iconscout.com/icon/free/png-256/free-twitter-1865886-1581902.png"
+                            alt=""></a>
+                    <a href="https://mail.google.com/mail/u/0/#inbox"><img
+                            src="https://icon-library.com/images/icon-email/icon-email-5.jpg" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="end">
+            <div class="cardEnd1">
+                <h1>Start your journey with our amazing teachers!</h1>
+                <button>📧 Email us your Resume now!</button>
+            </div>
+            <div class="cardEnd2">
+                <img src="img/teach.png" alt="">
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Start of the Footer -->
+    <footer>
+        <div class="footer-wrap">
+            <div class="widgetFooter" id="footerLogo">
+                <img src="img/KTEL-logo-removebg-preview.png" alt="Logo">
+            </div>
+            <div class="widgetFooter">
+
+                <h4 class="uppercase">useful links</h4>
+                <ul id="footerUsefulLink">
+                    <li title="About US">
+
+                        <a>&nbsp;About us</a>
+                    </li>
+                    <li title="Servicers">
+
+                        <a>&nbsp;Services</a>
+                    </li>
+                    <li title="Works">
+
+                        <a>&nbsp;How It Works</a>
+                    </li>
+                    <li title="Teachers">
+
+                        <a>&nbsp;Our Teachers</a>
+                    </li>
+                    <li title="Contact Us">
+
+                        <a>&nbsp;Contact us</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="widgetFooter">
+                <h4 class="uppercase">Social media links</h4>
+                <ul id="footerMediaLinks">
+                    <li class="media1" title="Facebook">
+                        <span class="mediaLinksIcons fb">
+                            <i class="fab fa-facebook-square"></i>
+                        </span>
+                        <a class="fb">&nbsp;facebook</a>
+                    </li>
+                    <li class="media2" title="Twitter">
+                        <span class="mediaLinksIcons twit">
+                            <i class="fab fa-twitter-square"></i>
+                        </span>
+                        <a class="twit">&nbsp;Twitter</a>
+                    </li>
+                    <li class="media3" title="Instagram">
+                        <span class="mediaLinksIcons insta">
+                            <i class="fab fa-instagram"></i>
+                        </span>
+                        <a class="insta">&nbsp;instagram</a>
+                    </li>
+                    <li class="media4" title="Github">
+                        <span class="mediaLinksIcons git">
+                            <i class="fab fa-github-alt"></i>
+                        </span>
+                        <a class="git">&nbsp;Github</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footerCopy">
+            <div class="inb">
+                <p>@ 2023 KidsTalk E-Learning<sup></sup>.All Right Reserved. </p>
+            </div>
+        </div>
+    </footer>
+    <!-- End of the Footer -->
+    <script>
+        const navSlide = () => {
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('.nav-links');
+            const navLinks = document.querySelectorAll('nav .nav-links li');
+
+            burger.addEventListener('click', () => {
+                nav.classList.toggle('nav-active');
+                navLinks.forEach((links, index) => {
+                    if (links.style.animation) { links.style.animation = '' }
+                    else {
+                        links.style.animation = `navLinksFade 0.5s ease forwards ${index / 5}s`
+                    }
+                });
+                burger.classList.toggle('toggle');
+            });
+        }
+        navSlide();
+    </script>
+</body>
+
+
+</html>

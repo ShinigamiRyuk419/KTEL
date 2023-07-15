@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/regLog.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+    <title>KTEL | Register</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/KTEL-logo-removebg-preview.png" alt="">
+            </a>
+
+        </div>
+        <div class="conNav">
+            <ul class="nav-links">
+                <li><a href="aboutUs.html">About Us</a></li>
+                <li class="dropbtn"><a href="">Services</a>
+                    <i class="fa fa-caret-down"></i>
+                    <div class="dropdown-content">
+                        <a href="#">Packages</a>
+                        <a href="#">Language Tutorial Services</a>
+                        <a href="#">Services Pricing</a>
+                    </div>
+                </li>
+                <li class="dropbtn"><a href="">How it Works</a>
+                    <i class="fa fa-caret-down"></i>
+                    <div class="dropdown-content">
+                        <a href="#">How to Pay</a>
+                    </div>
+                </li>
+                <li><a href="teacher.html">Our Teachers</a></li>
+                <li><a href="testimonial.html">Testimonials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="register.html"><button>Login/Register</button></a></li>
+            </ul>
+            <div class="burger">
+                <div class="ham-burger"></div>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- End of Navigation -->
+    <section>
+        <div class="banner">
+
+        </div>
+
+        <div class="body">
+            <div class="cont" id="blur">
+                <form action="../RCwebsite/RC_HomeOne.html" name="myForm">
+                    <div class="form sign-in">
+                        <h2>Welcome to KTEL!</h2>
+                        <br>
+                        <!-- <hr style="border-top: 3px solid #070707;"> -->
+                        <br>
+                        <p style="color:grey;font-size: small;text-align: center;">Fill in the fields below.</p>
+                        <label for="email">
+                            <span>Email Address</span>
+                            <input type="email" id="email" name="email" required>
+                        </label>
+                        <label>
+                            <span>Password</span>
+                            <input type="password" minlength="5" name="password" required>
+                        </label>
+                        <!-- <a href="../RCwebsite/RC_Home.html" style="text-decoration: none;"> -->
+                        <button class="submit" type="submit">Login Now</button>
+                        <!-- </a> -->
+                        <!-- <p class="forgot-pass">Forgot Password ?</p> -->
+
+                        <div class="social-media">
+                            <ul>
+                                <li><img src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png"></li>
+                                <li><img
+                                        src="https://seeklogo.com/images/T/twitter-icon-circle-blue-logo-0902F48837-seeklogo.com.png">
+                                </li>
+                                <li><img src="https://cdn-icons-png.flaticon.com/512/4138/4138198.png"></li>
+                                <li><img
+                                        src="https://i0.wp.com/bodybeyondlimits.com.au/wp-content/uploads/2022/07/instagram-circle-icon-png-4.png?ssl=1">
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </form>
+
+
+                <div class="sub-cont">
+                    <div class="img">
+                        <div class="img-text m-up">
+                            <h2>New here?</h2>
+                            <p>Register and discover great chance to lean with us!</p>
+                        </div>
+                        <div class="img-text m-in">
+                            <h2>One of us?</h2>
+                            <p>If you already has an account, just log in. We've missed you!</p>
+                        </div>
+                        <div class="img-btn">
+                            <span class="m-up">Register</span>
+                            <span class="m-in">Login</span>
+                        </div>
+                    </div>
+                    <form action="../RCwebsite/RC_HomeOne.html" name="myForm">
+                        <div class="form sign-up">
+                            <h2>Create an Account </h2>
+                            <br>
+                            <!-- <hr> -->
+                            <br>
+                            <p>Fill in the fields below.</p>
+                            <label for="email">
+                                <span>Email</span>
+                                <input type="email" name="email" required>
+                            </label>
+                            <label for="password">
+                                <span>Password</span>
+                                <input type="password" name="password" required>
+                            </label>
+                            <label for="confirm-password">
+                                <span>Retype Password</span>
+                                <input type="password" name="confirmpassword" required>
+                            </label>
+                            <button type="submit" class="submit">Register Now</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <script>
+            document.querySelector('.img-btn').addEventListener('click', function () {
+                document.querySelector('.cont').classList.toggle('s-signup')
+            });
+        </script>
+    </section>
+
+    <!-- Start of the Footer -->
+    <footer>
+        <div class="footer-wrap">
+            <div class="widgetFooter" id="footerLogo">
+                <img src="img/KTEL-logo-removebg-preview.png" alt="Logo">
+            </div>
+            <div class="widgetFooter">
+
+                <h4 class="uppercase">useful links</h4>
+                <ul id="footerUsefulLink">
+                    <li title="About US">
+
+                        <a>&nbsp;About us</a>
+                    </li>
+                    <li title="Servicers">
+
+                        <a>&nbsp;Services</a>
+                    </li>
+                    <li title="Works">
+
+                        <a>&nbsp;How It Works</a>
+                    </li>
+                    <li title="Teachers">
+
+                        <a>&nbsp;Our Teachers</a>
+                    </li>
+                    <li title="Contact Us">
+
+                        <a>&nbsp;Contact us</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="widgetFooter">
+                <h4 class="uppercase">Social media links</h4>
+                <ul id="footerMediaLinks">
+                    <li class="media1" title="Facebook">
+                        <span class="mediaLinksIcons fb">
+                            <i class="fab fa-facebook-square"></i>
+                        </span>
+                        <a class="fb">&nbsp;facebook</a>
+                    </li>
+                    <li class="media2" title="Twitter">
+                        <span class="mediaLinksIcons twit">
+                            <i class="fab fa-twitter-square"></i>
+                        </span>
+                        <a class="twit">&nbsp;Twitter</a>
+                    </li>
+                    <li class="media3" title="Instagram">
+                        <span class="mediaLinksIcons insta">
+                            <i class="fab fa-instagram"></i>
+                        </span>
+                        <a class="insta">&nbsp;instagram</a>
+                    </li>
+                    <li class="media4" title="Github">
+                        <span class="mediaLinksIcons git">
+                            <i class="fab fa-github-alt"></i>
+                        </span>
+                        <a class="git">&nbsp;Github</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footerCopy">
+            <div class="inb">
+                <p>@ 2023 KidsTalk E-Learning<sup></sup>.All Right Reserved. </p>
+            </div>
+        </div>
+    </footer>
+    <!-- End of the Footer -->
+    <script>
+        const navSlide = () => {
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('.nav-links');
+            const navLinks = document.querySelectorAll('nav .nav-links li');
+
+            burger.addEventListener('click', () => {
+                nav.classList.toggle('nav-active');
+                navLinks.forEach((links, index) => {
+                    if (links.style.animation) { links.style.animation = '' }
+                    else {
+                        links.style.animation = `navLinksFade 0.5s ease forwards ${index / 5}s`
+                    }
+                });
+                burger.classList.toggle('toggle');
+            });
+        }
+        navSlide();
+    </script>
+</body>
+
+
+</html>
