@@ -1,18 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/contact.css">
-    <title>KTEL | Contact</title>
-    <style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> KTEL | Contact Us</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
@@ -22,82 +16,372 @@
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
   </style>
-    <style>
-        .firstDiv {
-            height: auto;
-            width: 100%;
-            padding: 20px;
-        }
+  <style>
+    .firstDiv {
+      height: auto;
+      width: 100%;
+      padding: 20px;
+    }
 
-        .firstDiv h1 {
-            text-align: center;
-            margin: 0;
-            font-size: 25pt;
-            font-weight: 600;
-        }
+    .firstDiv h1 {
+      text-align: center;
+      margin: 0;
+      font-size: 25pt;
+      font-weight: 600;
+    }
 
-        .firstDiv p {
-            text-align: center;
-        }
-    </style>
+    .firstDiv p {
+      text-align: center;
+    }
+  </style>
+  <style>
+    /* @import url('http://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap'); */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .section {
+      margin-top: -150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin-bottom: 100px;
+      /* background-color: #095a55; */
+
+    }
+
+    .section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      /* background: #fff38e; */
+    }
+
+    .container {
+      position: relative;
+      min-width: 1100px;
+      margin-left: 250px;
+      min-height: 550px;
+      display: flex;
+      z-index: 1000;
+      /* border-radius: 22px; */
+      /* background-color: #fff; */
+
+    }
+
+    .container .contactInfo {
+      position: absolute;
+      top: 40px;
+      width: 350px;
+      height: calc(100% - 80px);
+      background: rgb(199, 188, 190);
+      z-index: 1;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 20px 20px 25px rgba(0, 0, 0, 0.15);
+      border-radius: 22px;
+    }
+
+    .container .contactInfo h2 {
+      color: black;
+      font-size: 20pt;
+      font-weight: 500;
+    }
+
+    .container .contactInfo ul.info {
+      position: relative;
+      margin: 20px 0;
+    }
+
+    .container .contactInfo ul.info li {
+      position: relative;
+      list-style: none;
+      display: flex;
+      margin: 20px 0;
+      cursor: pointer;
+      align-items: flex-start;
+    }
+
+    .container .contactInfo ul.info li span:nth-child(1) {
+      width: 30px;
+      min-width: 30px;
+    }
+
+    /* for gmail */
+    .container .contactInfo ul.info li span a {
+      color: black;
+      text-decoration: none;
+      width: 30px;
+      min-width: 30px;
+
+    }
+
+    .container .contactInfo ul.info li span:nth-child(1) img {
+      max-width: 100%;
+      /* filter: invert(1); */
+    }
+
+    .container .contactInfo ul.info li span:nth-child(2) {
+      color: black;
+      margin-left: 10px;
+      font-weight: 300;
+    }
+
+
+    .container .contactForm {
+      position: absolute;
+      padding: 70px 50px;
+      padding-left: 250px;
+      margin-left: 150px;
+      width: calc(100% - 200px);
+      height: 97%;
+      background: rgba(247, 169, 160, 1);
+      box-shadow: 0 50px 50px rgba(0, 0, 0, 0.25);
+      border-radius: 22px;
+    }
+
+    .container .contactForm h2 {
+      color: black;
+      font-size: 20pt;
+      font-weight: 500;
+    }
+
+    .container .contactForm .formBox {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding-top: 30px;
+    }
+
+    .container .contactForm .formBox .inputBox {
+      position: relative;
+      margin-bottom: 35px;
+    }
+
+    .container .contactForm .formBox .inputBox.w50 {
+      width: 47%;
+    }
+
+    .container .contactForm .formBox .inputBox.w100 {
+      width: 100%;
+    }
+
+    .container .contactForm .formBox .inputBox input,
+    .container .contactForm .formBox .inputBox textarea {
+      width: 100%;
+      resize: none;
+      padding: 5px 0;
+      font-size: 10pt;
+      font-weight: 300;
+      padding-left: 10px;
+      color: #333;
+      border-radius: 10px;
+      border: 1px solid rgba(216, 29, 65, 1);
+      /* border-bottom: 1px solid #777; */
+    }
+
+    .container .contactForm .formBox .inputBox textarea {
+      height: 120px;
+    }
+
+    .container .contactForm .formBox .inputBox span {
+      position: absolute;
+      left: 10px;
+      padding: 5px 0;
+      pointer-events: none;
+      font-size: 10pt;
+      font-weight: 300;
+      transition: 0.3s;
+    }
+
+    .container .contactForm .formBox .inputBox input:focus~span,
+    .container .contactForm .formBox .inputBox input:valid~span,
+    .container .contactForm .formBox .inputBox textarea:focus~span,
+    .container .contactForm .formBox .inputBox textarea:valid~span {
+      transform: translateY(-20px);
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      color: black;
+      font-weight: 500;
+    }
+
+    /* Css for the submit button */
+    .container .contactForm .formBox .inputBox input[type="submit"] {
+      position: relative;
+      cursor: pointer;
+      background: rgba(218, 50, 75, 1);
+      border-radius: 20px;
+      color: #fff;
+      border: none;
+      max-width: 150px;
+      padding: 12px;
+
+    }
+
+    .container .contactForm .formBox .inputBox input[type="submit"]:hover {
+      background: rgba(51, 71, 255, 1);
+    }
+
+    /* make the form responsive */
+    @media (max-width: 1440px) {
+      .container {
+        width: 90%;
+        min-width: auto;
+        margin: 20px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+      }
+
+      .container .contactInfo {
+        top: 0;
+        height: 550px;
+        position: relative;
+        box-shadow: none;
+        border-radius: 0px;
+      }
+
+      .container .contactForm {
+        position: relative;
+        width: calc(100% - 350px);
+        padding-left: 0;
+        margin-left: 0;
+        padding: 40px;
+        height: 550px;
+        box-shadow: none;
+        border-radius: 0px;
+      }
+    }
+
+    @media (max-width: 991px) {
+      .section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        /* background: #fff38e; */
+      }
+
+      .section::before {
+        display: none;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+
+      .container .contactForm {
+        width: 100%;
+        height: auto;
+        border-radius: 0px;
+      }
+
+      .container .contactInfo {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        border-radius: 0px;
+      }
+
+      .container .contactInfo ul.sci {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container .contactForm {
+        padding: 25px;
+      }
+
+      .container .contactInfo {
+        padding: 25px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .container .contactInfo ul.sci {
+        margin-top: 40px;
+      }
+
+      .container .contactForm .formBox .inputBox.w50 {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <nav>
-        <div class="logo">
-            <a href="index.html">
-                <img src="img/KTEL-logo-removebg-preview.png" alt="">
-            </a>
-            
-        </div>
-        <div class="conNav">
-            <ul class="nav-links">
-                <li><a href="aboutUs.html">About Us</a></li>
-                <li class="dropbtn"><a href="">Services</a>
-                    <i class="fa fa-caret-down"></i>
-                    <div class="dropdown-content">
-                        <a href="#">Packages</a>
-                        <a href="#">Language Tutorial Services</a>
-                        <a href="#">Services Pricing</a>
-                      </div>
-                </li>
-                <li class="dropbtn"><a href="">How it Works</a>
-                    <i class="fa fa-caret-down"></i>
-                    <div class="dropdown-content">
-                        <a href="#">How to Pay</a>
-                      </div>
-                </li>
-                <li><a href="teacher.html">Our Teachers</a></li>
-                <li><a href="testimonial.html">Testimonials</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="register.html"><button>Login/Register</button></a></li>
-            </ul>
-            <div class="burger">
-                <div class="ham-burger"></div>
-            </div>
-        </div>
-        
 
-    </nav>
+  <nav>
+    <div class="logo">
+      <a href="index.html">
+        <img src="img/KTEL-logo-removebg-preview.png" alt="">
+      </a>
 
-    <!-- End of Navigation -->
-    <section>
-        <div class="banner">
-            <img src="img/ContactBanner.png" alt="">
-            <div class="centered">
-                <h1>Contact Us</h1>
-                <h3>Your learning buddy!</h3><br>
-            </div>
-        </div>
+    </div>
+    <div class="conNav">
+      <ul class="nav-links">
+        <li><a href="aboutUs.html">About Us</a></li>
+        <li class="dropbtn"><a href="">Services</a>
+          <i class="fa fa-caret-down"></i>
+          <div class="dropdown-content">
+            <a href="#">Packages</a>
+            <a href="#">Language Tutorial Services</a>
+            <a href="#">Services Pricing</a>
+          </div>
+        </li>
+        <li class="dropbtn"><a href="">How it Works</a>
+          <i class="fa fa-caret-down"></i>
+          <div class="dropdown-content">
+            <a href="#">How to Pay</a>
+          </div>
+        </li>
+        <li><a href="teacher.html">Our Teachers</a></li>
+        <li><a href="testimonial.html">Testimonials</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="register.html"><button>Login/Register</button></a></li>
+      </ul>
+      <div class="burger">
+        <div class="ham-burger"></div>
+      </div>
+    </div>
+  </nav>
+  <!-- end of navigation -->
+  <section>
+    <div class="banner">
+      <img src="img/ContactBanner.png" alt="">
+      <div class="centered">
+        <h1>Contact Us</h1>
+        <h3>Your learning buddy!</h3><br>
+      </div>
+    </div>
 
-        <div class="firstDiv">
-            <h1><b style="color: rgba(0, 97, 10, 1);">We Would</b> <b style="color: rgba(218, 50, 75, 1)">Love</b> <b
-                    style="color: rgba(39, 159, 214, 1)">To Hear</b> <b
-                    style="color: rgba(105, 62, 151, 1)">From You</b></h1>
-            <p> Let us Know your queries!</p>
-        </div>
+    <div class="firstDiv">
+      <h1><b style="color: rgba(0, 97, 10, 1);">We Would</b> <b style="color: rgba(218, 50, 75, 1)">Love</b> <b
+          style="color: rgba(39, 159, 214, 1)">To Hear</b> <b style="color: rgba(105, 62, 151, 1)">From
+          You</b></h1>
+      <p> Let us Know your queries!</p>
+    </div>
 
-        <div class="section">
+  
+
+
+  <div class="section">
     <div class="container">
       <div class="contactInfo">
         <div>
@@ -159,102 +443,98 @@
         </div>
       </div>
 
-  </div>
+    </div>
+  </section>
 
-        
 
-    </section>
-
-    <!-- Start of the Footer -->
     <footer>
-        <div class="footer-wrap">
-            <div class="widgetFooter" id="footerLogo">
-                <img src="img/KTEL-logo-removebg-preview.png" alt="Logo">
-            </div>
-            <div class="widgetFooter">
+      <div class="footer-wrap">
+          <div class="widgetFooter" id="footerLogo">
+              <img src="img/KTEL-logo-removebg-preview.png" alt="Logo">
+          </div>
+          <div class="widgetFooter">
 
-                <h4 class="uppercase">useful links</h4>
-                <ul id="footerUsefulLink">
-                    <li title="About US">
+              <h4 class="uppercase">useful links</h4>
+              <ul id="footerUsefulLink">
+                  <li title="About US">
 
-                        <a>&nbsp;About us</a>
-                    </li>
-                    <li title="Servicers">
+                      <a>&nbsp;About us</a>
+                  </li>
+                  <li title="Servicers">
 
-                        <a>&nbsp;Services</a>
-                    </li>
-                    <li title="Works">
+                      <a>&nbsp;Services</a>
+                  </li>
+                  <li title="Works">
 
-                        <a>&nbsp;How It Works</a>
-                    </li>
-                    <li title="Teachers">
+                      <a>&nbsp;How It Works</a>
+                  </li>
+                  <li title="Teachers">
 
-                        <a>&nbsp;Our Teachers</a>
-                    </li>
-                    <li title="Contact Us">
+                      <a>&nbsp;Our Teachers</a>
+                  </li>
+                  <li title="Contact Us">
 
-                        <a>&nbsp;Contact us</a>
-                    </li>
-                </ul>
-            </div>
+                      <a>&nbsp;Contact us</a>
+                  </li>
+              </ul>
+          </div>
 
-            <div class="widgetFooter">
-                <h4 class="uppercase">Social media links</h4>
-                <ul id="footerMediaLinks">
-                    <li class="media1" title="Facebook">
-                        <span class="mediaLinksIcons fb">
-                            <i class="fab fa-facebook-square"></i>
-                        </span>
-                        <a class="fb">&nbsp;facebook</a>
-                    </li>
-                    <li class="media2" title="Twitter">
-                        <span class="mediaLinksIcons twit">
-                            <i class="fab fa-twitter-square"></i>
-                        </span>
-                        <a class="twit">&nbsp;Twitter</a>
-                    </li>
-                    <li class="media3" title="Instagram">
-                        <span class="mediaLinksIcons insta">
-                            <i class="fab fa-instagram"></i>
-                        </span>
-                        <a class="insta">&nbsp;instagram</a>
-                    </li>
-                    <li class="media4" title="Github">
-                        <span class="mediaLinksIcons git">
-                            <i class="fab fa-github-alt"></i>
-                        </span>
-                        <a class="git">&nbsp;Github</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="footerCopy">
-            <div class="inb">
-                <p>@ 2023 KidsTalk E-Learning<sup></sup>.All Right Reserved. </p>
-            </div>
-        </div>
-    </footer>
-    <!-- End of the Footer -->
-    <script>
-        const navSlide = () => {
-            const burger = document.querySelector('.burger');
-            const nav = document.querySelector('.nav-links');
-            const navLinks = document.querySelectorAll('nav .nav-links li');
+          <div class="widgetFooter">
+              <h4 class="uppercase">Social media links</h4>
+              <ul id="footerMediaLinks">
+                  <li class="media1" title="Facebook">
+                      <span class="mediaLinksIcons fb">
+                          <i class="fab fa-facebook-square"></i>
+                      </span>
+                      <a class="fb">&nbsp;facebook</a>
+                  </li>
+                  <li class="media2" title="Twitter">
+                      <span class="mediaLinksIcons twit">
+                          <i class="fab fa-twitter-square"></i>
+                      </span>
+                      <a class="twit">&nbsp;Twitter</a>
+                  </li>
+                  <li class="media3" title="Instagram">
+                      <span class="mediaLinksIcons insta">
+                          <i class="fab fa-instagram"></i>
+                      </span>
+                      <a class="insta">&nbsp;instagram</a>
+                  </li>
+                  <li class="media4" title="Github">
+                      <span class="mediaLinksIcons git">
+                          <i class="fab fa-github-alt"></i>
+                      </span>
+                      <a class="git">&nbsp;Github</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+      <div class="footerCopy">
+          <div class="inb">
+              <p>@ 2023 KidsTalk E-Learning<sup></sup>.All Right Reserved. </p>
+          </div>
+      </div>
+  </footer>
 
-            burger.addEventListener('click', () => {
-                nav.classList.toggle('nav-active');
-                navLinks.forEach((links, index) => {
-                    if (links.style.animation) { links.style.animation = '' }
-                    else {
-                        links.style.animation = `navLinksFade 0.5s ease forwards ${index / 5}s`
-                    }
-                });
-                burger.classList.toggle('toggle');
+  <script>
+    const navSlide = () => {
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('.nav-links');
+        const navLinks = document.querySelectorAll('nav .nav-links li');
+
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('nav-active');
+            navLinks.forEach((links, index) => {
+                if (links.style.animation) { links.style.animation = '' }
+                else {
+                    links.style.animation = `navLinksFade 0.5s ease forwards ${index / 5}s`
+                }
             });
-        }
-        navSlide();
-    </script>
+            burger.classList.toggle('toggle');
+        });
+    }
+    navSlide();
+</script>
 </body>
-
 
 </html>
