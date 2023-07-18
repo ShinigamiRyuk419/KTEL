@@ -8,15 +8,17 @@
 }
 
 .section {
+    margin-top:-150px;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background-color: none;
+    margin-bottom: 200px;
 
 }
 
-section::before {
+.section::before {
     content: '';
     position: absolute;
     top: 0;
@@ -247,7 +249,7 @@ section::before {
 }
 
 @media (max-width: 991px) {
-    section {
+    .section {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -255,7 +257,7 @@ section::before {
         background:none;
     }
 
-    section::before {
+    .section::before {
         display: none;
     }
 
