@@ -78,7 +78,7 @@
                         <!-- <a href="../RCwebsite/RC_Home.html" style="text-decoration: none;"> -->
                         <button class="submit" type="submit">Login Now</button>
                         <!-- </a> -->
-                        <!-- <p class="forgot-pass">Forgot Password ?</p> -->
+                        <p class="forgot-pass">Don't have account? Register Now</p>
 
                         <div class="social-media">
                             <ul>
@@ -137,6 +137,86 @@
                 </div>
             </div>
         </div>
+
+
+        <!-- mobile layout -->
+
+        <div class="mobile">
+
+            <div class="container">
+
+                <!-- upper button section to select
+                     the login or signup form -->
+                <div class="slider"></div>
+                <div class="btn">
+                    <button class="login">Login</button>
+                    <button class="signup">Signup</button>
+                </div>
+    
+                <!-- Form section that contains the
+                     login and the signup form -->
+                <div class="form-section">
+    
+                    <!-- login form -->
+                    <form action="index.html" name="myForm">
+                        <div class="login-box">
+                            <p >Fill in the fields below.</p>
+                            <label for="email">
+                                <span>Email Address</span>
+                                <input type="email" id="email" name="email" required>
+                            </label>
+                            <label>
+                                <span>Password</span>
+                                <input type="password" minlength="5" name="password" required>
+                            </label>
+                            <button class="clkbtn">Login</button>
+                        </div>
+                    </form>
+                    
+                    
+    
+                    <!-- signup form -->
+                    <form action="index.html" name="myForm">
+                        <div class="signup-box">
+                            <p>Fill in the fields below.</p>
+                                <label for="email">
+                                    <span>Email</span>
+                                    <input type="email" name="email" required>
+                                </label>
+                                <label for="password">
+                                    <span>Password</span>
+                                    <input type="password" name="password" required>
+                                </label>
+                                <label for="confirm-password">
+                                    <span>Retype Password</span>
+                                    <input type="password" name="confirmpassword" required>
+                                </label>
+                            <button class="clkbtn">Signup</button>
+                        </div>
+                    </form>
+                    
+                </div>
+            </div>
+
+        </div>
+        
+
+        <script>
+            let signup = document.querySelector(".signup");
+            let login = document.querySelector(".login");
+            let slider = document.querySelector(".slider");
+            let formSection = document.querySelector(".form-section");
+
+            signup.addEventListener("click", () => {
+                slider.classList.add("moveslider");
+                formSection.classList.add("form-section-move");
+            });
+
+            login.addEventListener("click", () => {
+                slider.classList.remove("moveslider");
+                formSection.classList.remove("form-section-move");
+            });
+        </script>
 
 
         <script>
