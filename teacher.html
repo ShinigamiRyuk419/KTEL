@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/style.css">
-    <title>KTEL | Our Teachers</title>
+    <title>KTEL | Testimonials</title>
     <style>
         .firstDiv {
             height: auto;
@@ -29,57 +29,86 @@
             text-align: center;
         }
 
+        /* for cards */
         .boxTeach {
             grid-column: 2 / span 12;
             display: grid;
             grid-template-columns: repeat(12, minmax(auto, 60px));
             grid-gap: 40px;
+            grid-row-gap: 100px;
             justify-content: center;
             align-items: center;
             padding: 60px 0;
+            /* background-color: red; */
         }
 
         .cardTeach {
             grid-column-end: span 4;
             display: flex;
             flex-direction: column;
-            background-color: #39393b;
+            background-color: #d4d4d6f1;
             cursor: pointer;
             transition: all 0.3s ease 0s;
-            background-color: rgb(234, 228, 229);
-            box-shadow: 1px 1px 5px rgba(216, 29, 65, 1);
-            /* justify-content: center;
-            align-items: center; */
-            /* margin: 20px;
-            width: 300px;
-            height: fit-content;
-            background-color: rgb(234, 228, 229);
-            box-shadow: 1px 1px 5px rgba(216, 29, 65, 1); */
+            box-shadow: 1px 1px 5px rgb(9, 9, 9);
+            border-radius: 30px;
+
         }
 
         .cardTeach:hover {
             transform: translateY(-7px);
         }
 
-        .cardTeach .circle{
-            margin: auto;
-            padding: 30px;
-            
+        .content {
+            color: #262626;
+            margin-top: 50px;
+            text-align: center;
         }
-        .cardTeach .circle img {
-            /* margin-left: 110px; */
-            margin-top: 5%;
-            width: 142px;
-            height: 142px;
+
+        /* .cardTeach .img-area {
+            width: 90px;
+            height: 90px;
+            position: absolute;
+            top: -40px;
+            left: 0;
+            bottom: 0;
+            margin: 0 auto;
+            right: 0;
+            z-index: 1;
+            border: 5px solid #fff;
             border-radius: 50%;
+            box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .cardTeach .img-area img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        } */
+
+        .cardTeach .circle {
+            margin: auto;
+            margin-top: -50px;
+            background-color: rgba(216, 29, 65, 1);
+            border-radius: 50%;
+            height: 100px;
+            /* padding: 30px; */
+
+        }
+
+        .cardTeach .circle img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 5px solid white;
             box-shadow: 0 1px 2px rgba(51, 71, 255, 1);
         }
 
         .name {
+            margin-top: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: black;
+            color: rgba(51, 71, 255, 1);
             text-transform: uppercase;
             font-weight: 600;
             font-size: 10pt;
@@ -94,8 +123,9 @@
             color: black;
             text-transform: capitalize;
             font-weight: 400;
-            font-size: 16px;
+            font-size: 10px;
             padding: 5px;
+            margin-bottom: 30px;
             /* text-shadow: 5px 5px 3px black; */
         }
 
@@ -120,11 +150,15 @@
             .cardTeach {
                 grid-column-end: span 6;
             }
+
+            .boxTeach {
+                padding: 20px;
+            }
         }
 
         @media only screen and (max-width: 700px) {
             .boxTeach {
-                grid-gap: 20px;
+                padding: 20px;
             }
 
             .cardTeach {
@@ -139,9 +173,9 @@
             } */
 
             .boxTeach {
+                padding: 20px;
                 grid-column: 2 / span 6;
                 grid-template-columns: repeat(6, 1fr);
-                grid-gap: 20px;
             }
 
             .cardTeach {
@@ -149,38 +183,145 @@
             }
         }
 
-        .end{
+        /* for videos */
+        .itWorks {
             height: auto;
             width: 100%;
-            display: flex;
-        }
-        .cardEnd1{
-            margin-top:100px;
-            margin-left: 100px;
-        }
-        .cardEnd1 h1{
-            text-align: left;
-            justify-self: center;
-        }
-        .cardEnd1 button{
-            height: 40px;
-            width: 50%;
             text-align: center;
-            margin-top: 20px;
-            background-color: rgba(216, 29, 65, 1);
-            border-radius: 10px;
-            color: white;
-            border: none;
+            margin: auto;
+        }
+
+        .itWorks h3 u {
+            text-decoration-color: blue;
+        }
+
+        .worksgrid {
+            /* background-color: aquamarine; */
+            height: 300px;
+            display: flex;
+            align-items: center;
+
+        }
+
+        .vidCon {
+            top:0px;
+            max-width: 1200px;
+            margin: 100px auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .vidCon .main-video-container {
+            flex: 1 1 700px;
+            border-radius: 5px;
+            box-shadow: 0 2px 1px rgba(51, 71, 255, 1);
+            background-color: rgba(23, 123, 173, 0.13);
+            padding: 15px;
+        }
+
+        .vidCon .main-video-container .main-video {
+            margin-bottom: 7px;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .vidCon .main-video-container .main-vid-title {
+            font-size: 20px;
+            color: black;
+        }
+
+        .vidCon .video-list-container {
+            flex: 1 1 350px;
+            height: 485px;
+            overflow-y: scroll;
+            border-radius: 5px;
+            box-shadow: 0 2px 1px rgba(218, 50, 75, 1);
+            background-color: rgba(218, 50, 75, 0.2);
+            padding: 15px;
+        }
+
+        .vidCon .video-list-container::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        .vidCon .video-list-container::-webkit-scrollbar-track {
+            background-color: #fff;
+            border-radius: 5px;
+        }
+
+        .vidCon .video-list-container::-webkit-scrollbar-thumb {
+            background-color: rgba(218, 50, 75, 1);
+            border-radius: 5px;
+        }
+
+        .vidCon .video-list-container .list {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 10px;
+            background-color: rgba(218, 50, 75, 0.5);
             cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 10px;
         }
-        @media only screen and (max-width: 1000px) {
-            .cardEnd2 {
-                display: none;
+
+        .vidCon .video-list-container .list:last-child {
+            margin-bottom: 0;
+        }
+
+        .container .video-list-container .list.active {
+            background-color: rgba(51, 71, 255, 1);
+        }
+
+        .vidCon .video-list-container .list.active .list-title {
+            color: #fff;
+        }
+
+        .vidCon .video-list-container .list .list-video {
+            width: 100px;
+            border-radius: 5px;
+        }
+
+        .vidCon .video-list-container .list .list-title {
+            font-size: 17px;
+            color: white;
+        }
+
+
+
+
+        @media (max-width:800px) {
+
+            .vidCon {
+                margin: 0;
+                padding: 20px;
             }
-            .cardEnd1{
-            margin-top:10px;
-            margin-left: 30px;
+
         }
+
+        @media (max-width:450px) {
+
+            .vidCon .main-video-container .main-vid-title {
+                font-size: 15px;
+                text-align: center;
+            }
+
+            .vidCon .video-list-container .list {
+                flex-flow: column;
+                gap: 10px;
+            }
+
+            .vidCon .video-list-container .list .list-video {
+                width: 100%;
+            }
+
+            .vidCon .video-list-container .list .list-title {
+                font-size: 15px;
+                text-align: center;
+            }
+
         }
     </style>
 </head>
@@ -226,241 +367,221 @@
     <!-- End of Navigation -->
     <section>
         <div class="banner">
-            <img src="img/teacherBanner.png" alt="">
+            <img src="img/testimonialBanner.png" alt="">
             <div class="centered">
-                <h1>Our Teachers.</h1>
+                <h1>Testimonials</h1>
                 <h3>Your learning buddy!</h3><br>
             </div>
         </div>
 
         <div class="firstDiv">
-            <h1><b style="color: rgba(0, 97, 10, 1);">Meet</b> <b style="color: rgba(218, 50, 75, 1)">Our</b> <b
-                    style="color: rgba(39, 159, 214, 1)">Dedicated</b> <b
-                    style="color: rgba(105, 62, 151, 1)">Teachers</b></h1>
+            <h1><b style="color: rgba(0, 97, 10, 1);">What</b> <b style="color: rgba(218, 50, 75, 1)">They Say</b> <b
+                    style="color: rgba(39, 159, 214, 1)">About</b> <b style="color: rgba(105, 62, 151, 1)">KTEL</b></h1>
             <p> Let your Kids learn with us!</p>
         </div>
-        <!-- Cards List of all Teachers -->
+
+        <!-- for cards -->
         <div class="boxTeach">
             <div class="cardTeach">
                 <div class="circle">
-                    <img src="img/Ellipse 512.png" alt="">
+                    <img src="https://static.wikia.nocookie.net/tokyoghoul/images/a/a4/Hinami_02.png/revision/latest?cb=20140711071508"
+                        alt="">
                 </div>
+                <p class="content">
+                    “KTEL teachers are very engaging they ensure that my child got learning every sessions."
+                </p>
+                <!-- <div class="img-area">
+                    <img src="https://media.istockphoto.com/id/1300972573/photo/pleasant-young-indian-woman-freelancer-consult-client-via-video-call.jpg?b=1&s=612x612&w=0&k=20&c=gApYcn6GubvJA-YoMO00KZAShv66MHEwrsAbcmaq_cQ="
+                        alt="">
+                </div> -->
+                <hr>
                 <span class="name">
                     Junnalyn Doning
                 </span>
-                <span class="pos">Teacher</span>
-                <hr>
-                <div class="Icons">
-                    <a href="https://www.facebook.com/"><img
-                            src="https://cdn.iconscout.com/icon/free/png-256/free-facebook-logo-2019-1597680-1350125.png"
-                            alt=""></a>
-                    <a href="https://www.instagram.com/accounts/login"><img
-                            src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png"
-                            alt=""></a>
-                    <a href="https://twitter.com/"><img
-                            src="https://cdn.iconscout.com/icon/free/png-256/free-twitter-1865886-1581902.png"
-                            alt=""></a>
-                    <a href="https://mail.google.com/mail/u/0/#inbox"><img
-                            src="https://icon-library.com/images/icon-email/icon-email-5.jpg" alt=""></a>
+                <span class="pos">Mother of John</span>
 
-                </div>
             </div>
             <div class="cardTeach">
                 <div class="circle">
                     <img src="https://fortnite.gg/img/items/8021/icon.png?4" alt="">
                 </div>
-                <span class="name">
-                    Mary Grace Vellina
-                </span>
-                <span class="pos">Teacher</span>
+                <p class="content">
+                    “KTEL teachers are very engaging they ensure that my child got learning every sessions."
+                </p>
                 <hr>
-                <div class="Icons">
-                    <a href="https://www.facebook.com/"><img
-                            src="https://cdn.iconscout.com/icon/free/png-256/free-facebook-logo-2019-1597680-1350125.png"
-                            alt=""></a>
-                    <a href="https://www.instagram.com/accounts/login"><img
-                            src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png"
-                            alt=""></a>
-                    <a href="https://twitter.com/"><img
-                            src="https://cdn.iconscout.com/icon/free/png-256/free-twitter-1865886-1581902.png"
-                            alt=""></a>
-                    <a href="https://mail.google.com/mail/u/0/#inbox"><img
-                            src="https://icon-library.com/images/icon-email/icon-email-5.jpg" alt=""></a>
-                </div>
-            </div>
-            <div class="cardTeach">
-                <div class="circle">
-                    <img src="https://easydrawingguides.com/wp-content/uploads/2017/05/how-to-draw-naruto-20.png" alt="">
-                </div>
-                <span class="name">
-                    Ignacio Yurag
-                </span>
-                <span class="pos">Teacher</span>
-                <hr>
-                <div class="Icons">
-                    <a href="https://www.facebook.com/"><img
-                            src="https://cdn.iconscout.com/icon/free/png-256/free-facebook-logo-2019-1597680-1350125.png"
-                            alt=""></a>
-                    <a href="https://www.instagram.com/accounts/login"><img
-                            src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png"
-                            alt=""></a>
-                    <a href="https://twitter.com/"><img
-                            src="https://cdn.iconscout.com/icon/free/png-256/free-twitter-1865886-1581902.png"
-                            alt=""></a>
-                    <a href="https://mail.google.com/mail/u/0/#inbox"><img
-                            src="https://icon-library.com/images/icon-email/icon-email-5.jpg" alt=""></a>
-                </div>
-            </div>
-            <div class="cardTeach">
-                <div class="circle">
-                    <img src="img/Ellipse 512.png" alt="">
-                </div>
                 <span class="name">
                     Junnalyn Doning
                 </span>
-                <span class="pos">Teacher</span>
-                <hr>
-                <div class="Icons">
-                    <a href="https://www.facebook.com/"><img
-                            src="https://cdn.iconscout.com/icon/free/png-256/free-facebook-logo-2019-1597680-1350125.png"
-                            alt=""></a>
-                    <a href="https://www.instagram.com/accounts/login"><img
-                            src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png"
-                            alt=""></a>
-                    <a href="https://twitter.com/"><img
-                            src="https://cdn.iconscout.com/icon/free/png-256/free-twitter-1865886-1581902.png"
-                            alt=""></a>
-                    <a href="https://mail.google.com/mail/u/0/#inbox"><img
-                            src="https://icon-library.com/images/icon-email/icon-email-5.jpg" alt=""></a>
+                <span class="pos">Mother of John</span>
 
-                </div>
             </div>
             <div class="cardTeach">
                 <div class="circle">
-                    <img src="img/Ellipse 512.png" alt="">
+                    <img src="https://easydrawingguides.com/wp-content/uploads/2017/05/how-to-draw-naruto-20.png"
+                        alt="">
                 </div>
-                <span class="name">
-                    Mary Grace Vellina
-                </span>
-                <span class="pos">Teacher</span>
+                <p class="content">
+                    “KTEL teachers are very engaging they ensure that my child got learning every sessions."
+                </p>
                 <hr>
-                <div class="Icons">
-                    <a href="https://www.facebook.com/"><img
-                            src="https://cdn.iconscout.com/icon/free/png-256/free-facebook-logo-2019-1597680-1350125.png"
-                            alt=""></a>
-                    <a href="https://www.instagram.com/accounts/login"><img
-                            src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png"
-                            alt=""></a>
-                    <a href="https://twitter.com/"><img
-                            src="https://cdn.iconscout.com/icon/free/png-256/free-twitter-1865886-1581902.png"
-                            alt=""></a>
-                    <a href="https://mail.google.com/mail/u/0/#inbox"><img
-                            src="https://icon-library.com/images/icon-email/icon-email-5.jpg" alt=""></a>
-                </div>
-            </div>
-            <div class="cardTeach">
-                <div class="circle">
-                    <img src="img/Ellipse 512.png" alt="">
-                </div>
-                <span class="name">
-                    Ignacio Yurag
-                </span>
-                <span class="pos">Teacher</span>
-                <hr>
-                <div class="Icons">
-                    <a href="https://www.facebook.com/"><img
-                            src="https://cdn.iconscout.com/icon/free/png-256/free-facebook-logo-2019-1597680-1350125.png"
-                            alt=""></a>
-                    <a href="https://www.instagram.com/accounts/login"><img
-                            src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png"
-                            alt=""></a>
-                    <a href="https://twitter.com/"><img
-                            src="https://cdn.iconscout.com/icon/free/png-256/free-twitter-1865886-1581902.png"
-                            alt=""></a>
-                    <a href="https://mail.google.com/mail/u/0/#inbox"><img
-                            src="https://icon-library.com/images/icon-email/icon-email-5.jpg" alt=""></a>
-                </div>
-            </div>
-            <div class="cardTeach">
-                <div class="circle">
-                    <img src="img/Ellipse 512.png" alt="">
-                </div>
                 <span class="name">
                     Junnalyn Doning
                 </span>
-                <span class="pos">Teacher</span>
-                <hr>
-                <div class="Icons">
-                    <a href="https://www.facebook.com/"><img
-                            src="https://cdn.iconscout.com/icon/free/png-256/free-facebook-logo-2019-1597680-1350125.png"
-                            alt=""></a>
-                    <a href="https://www.instagram.com/accounts/login"><img
-                            src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png"
-                            alt=""></a>
-                    <a href="https://twitter.com/"><img
-                            src="https://cdn.iconscout.com/icon/free/png-256/free-twitter-1865886-1581902.png"
-                            alt=""></a>
-                    <a href="https://mail.google.com/mail/u/0/#inbox"><img
-                            src="https://icon-library.com/images/icon-email/icon-email-5.jpg" alt=""></a>
+                <span class="pos">Mother of John</span>
 
-                </div>
             </div>
             <div class="cardTeach">
                 <div class="circle">
-                    <img src="img/Ellipse 512.png" alt="">
+                    <img src="https://static.wikia.nocookie.net/characterprofile/images/e/e6/Light_Yagami.png/revision/latest?cb=20160111184904"
+                        alt="">
                 </div>
-                <span class="name">
-                    Mary Grace Vellina
-                </span>
-                <span class="pos">Teacher</span>
+                <p class="content">
+                    “KTEL teachers are very engaging they ensure that my child got learning every sessions."
+                </p>
                 <hr>
-                <div class="Icons">
-                    <a href="https://www.facebook.com/"><img
-                            src="https://cdn.iconscout.com/icon/free/png-256/free-facebook-logo-2019-1597680-1350125.png"
-                            alt=""></a>
-                    <a href="https://www.instagram.com/accounts/login"><img
-                            src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png"
-                            alt=""></a>
-                    <a href="https://twitter.com/"><img
-                            src="https://cdn.iconscout.com/icon/free/png-256/free-twitter-1865886-1581902.png"
-                            alt=""></a>
-                    <a href="https://mail.google.com/mail/u/0/#inbox"><img
-                            src="https://icon-library.com/images/icon-email/icon-email-5.jpg" alt=""></a>
-                </div>
+                <span class="name">
+                    Junnalyn Doning
+                </span>
+                <span class="pos">Mother of John</span>
             </div>
             <div class="cardTeach">
                 <div class="circle">
-                    <img src="img/Ellipse 512.png" alt="">
+                    <img src="https://i0.wp.com/borutoexplorer.com.br/wp-content/uploads/2022/02/boruto-123.png?fit=1000%2C732&ssl=1"
+                        alt="">
                 </div>
-                <span class="name">
-                    Ignacio Yurag
-                </span>
-                <span class="pos">Teacher</span>
+                <p class="content">
+                    “KTEL teachers are very engaging they ensure that my child got learning every sessions."
+                </p>
                 <hr>
-                <div class="Icons">
-                    <a href="https://www.facebook.com/"><img
-                            src="https://cdn.iconscout.com/icon/free/png-256/free-facebook-logo-2019-1597680-1350125.png"
-                            alt=""></a>
-                    <a href="https://www.instagram.com/accounts/login"><img
-                            src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png"
-                            alt=""></a>
-                    <a href="https://twitter.com/"><img
-                            src="https://cdn.iconscout.com/icon/free/png-256/free-twitter-1865886-1581902.png"
-                            alt=""></a>
-                    <a href="https://mail.google.com/mail/u/0/#inbox"><img
-                            src="https://icon-library.com/images/icon-email/icon-email-5.jpg" alt=""></a>
+                <span class="name">
+                    Junnalyn Doning
+                </span>
+                <span class="pos">Mother of John</span>
+
+            </div>
+            <div class="cardTeach">
+                <div class="circle">
+                    <img src="https://wallpapercave.com/wp/wp10255862.png" alt="">
                 </div>
+                <p class="content">
+                    “KTEL teachers are very engaging they ensure that my child got learning every sessions."
+                </p>
+                <hr>
+                <span class="name">
+                    Junnalyn Doning
+                </span>
+                <span class="pos">Mother of John</span>
+
+            </div>
+            <div class="cardTeach">
+                <div class="circle">
+                    <img src="https://wallpapercave.com/wp/wp10255862.png" alt="">
+                </div>
+                <p class="content">
+                    “KTEL teachers are very engaging they ensure that my child got learning every sessions."
+                </p>
+                <hr>
+                <span class="name">
+                    Junnalyn Doning
+                </span>
+                <span class="pos">Mother of John</span>
+
+            </div>
+            <div class="cardTeach">
+                <div class="circle">
+                    <img src="https://wallpapercave.com/wp/wp10255862.png" alt="">
+                </div>
+                <p class="content">
+                    “KTEL teachers are very engaging they ensure that my child got learning every sessions."
+                </p>
+                <hr>
+                <span class="name">
+                    Junnalyn Doning
+                </span>
+                <span class="pos">Mother of John</span>
+
+            </div>
+            <div class="cardTeach">
+                <div class="circle">
+                    <img src="https://wallpapercave.com/wp/wp10255862.png" alt="">
+                </div>
+                <p class="content">
+                    “KTEL teachers are very engaging they ensure that my child got learning every sessions."
+                </p>
+                <hr>
+                <span class="name">
+                    Junnalyn Doning
+                </span>
+                <span class="pos">Mother of John</span>
+
             </div>
         </div>
-        <div class="end">
-            <div class="cardEnd1">
-                <h1>Start your journey with our amazing teachers!</h1>
-                <button>📧 Email us your Resume now!</button>
-            </div>
-            <div class="cardEnd2">
-                <img src="img/teach.png" alt="">
-            </div>
 
+        <div class="itWorks">
+            <h3>
+                <U>Our Live Sessions</U>
+            </h3>
+            
+        </div>
+
+        <div class="vid">
+            <div class="vidCon">
+
+                <div class="main-video-container">
+                    <video src="./img/vid1.mp4" loop controls class="main-video"></video>
+                    <h3 class="main-vid-title">Study Phase Phonics</h3>
+                </div>
+
+                <div class="video-list-container">
+
+                    <div class="list active">
+                        <video src="./img/vid1.mp4" class="list-video"></video>
+                        <h3 class="list-title">Study Phase Phonics</h3>
+                    </div>
+
+                    <div class="list">
+                        <video src="./img/vid2.mp4" class="list-video"></video>
+                        <h3 class="list-title">Jolly Phonics with Ynno</h3>
+                    </div>
+
+                    <div class="list">
+                        <video src="./img/vid3.mp4" class="list-video"></video>
+                        <h3 class="list-title">KTEL's Chiness Class</h3>
+                    </div>
+
+                    <div class="list">
+                        <video src="./img/vid4.mp4" class="list-video"></video>
+                        <h3 class="list-title">Reading with Ynno</h3>
+                    </div>
+
+                    <div class="list">
+                        <video src="./img/vid1.mp4" class="list-video"></video>
+                        <h3 class="list-title">Study Phase Phonics</h3>
+                    </div>
+
+                    <div class="list">
+                        <video src="./img/vid2.mp4" class="list-video"></video>
+                        <h3 class="list-title">Jolly Phonics with Ynno</h3>
+                    </div>
+
+                    <div class="list">
+                        <video src="./img/vid3.mp4" class="list-video"></video>
+                        <h3 class="list-title">KTEL's Chiness Class</h3>
+                    </div>
+
+                    <div class="list">
+                        <video src="./img/vid4.mp4" class="list-video"></video>
+                        <h3 class="list-title">Reading with Ynno</h3>
+                    </div>
+
+                    <div class="list">
+                        <video src="./img/vid1.mp4" class="list-video"></video>
+                        <h3 class="list-title">Study Phase Phonics</h3>
+                    </div>
+
+                </div>
+
+            </div>
         </div>
 
     </section>
