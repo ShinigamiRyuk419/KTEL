@@ -304,6 +304,13 @@ nav .nav-active {
         display: block;
         margin-bottom: 20px;
     }
+    .centered {
+        left: 200px;
+    }
+
+    .centered h1{
+        font-size: 30pt;
+    }
 }
 
 /* Style the counter cards */
