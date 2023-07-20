@@ -19,7 +19,7 @@
 
         .viewLeft {
             /* background-color: yellowgreen; */
-            width: 80%;
+            width: 100%;
         }
 
         .viewLeft img {
@@ -41,16 +41,36 @@
             width: 60%;
         }
 
+        .viewRight1 {
+            /* background-color: aquamarine; */
+            width: 40%;
+        }
+
         .rightext {
             align-content: center;
             text-align: center;
 
         }
 
-        .rightext img {
-            margin: 100px;
-            margin-bottom: 20px;
-            height: 150px;
+        .rightext1 {
+            width: 300px;
+            margin-top: 150px;
+            margin-left: 150px;
+            text-align: left;
+        }
+
+        .Leftext1 {
+            width: 300px;
+            left: 300px;
+            top: -320px;
+            position: relative;
+            height: 50px;
+            color: white;
+        }
+
+        .viewLeft1 img {
+            height: 450px;
+            width: 1000px;
         }
 
         @media only screen and (max-width:1155px) {
@@ -60,30 +80,36 @@
             }
 
             .Leftext {
-                top: -420px;
+                top: -320px;
                 position: relative;
                 color: white;
                 height: 50px;
-                width: 25%;
+                width: 50%;
                 left: 40px;
             }
 
             .viewLeft {
-                width: 200%;
+                width: 360px;
             }
 
             .viewRight {
-                width: 100%;
+                width: 50%;
             }
 
             .viewLeft img {
                 height: 450px;
-                width: 50%;
+                width: 100%;
+            }
+
+            .rightext {
+                width: 360px;
+                margin-bottom: 10px;
             }
 
             .rightext img {
-                margin: 100px;
+                /* margin: 100px; */
                 margin-bottom: 20px;
+                margin-left: 30px;
                 margin-top: 0px;
                 height: 150px;
             }
@@ -92,7 +118,28 @@
                 margin-left: 20px;
             }
 
+            .rightext1 {
+                margin-left: 10px;
+                margin-bottom: 10px;
+                text-align: center;
+            }
+
+            .rightext1 p {
+                margin-left: 50px;
+            }
+
+            .Leftext1 {
+                left: 100px;
+                width: 200px;
+            }
+
+            .viewLeft1 img {
+                width: 360px;
+            }
+
         }
+
+
 
         .itWorks {
             height: auto;
@@ -207,8 +254,28 @@
 
             .boxTeach {
                 display: block;
+                padding: 0px;
+                grid-row: auto;
+            }
+            .morebut1 button {
+                width: auto;
+                padding: 2px;
             }
         }
+
+        @media only screen and (max-width:360px) {
+            .worksgrid {
+                display: block;
+                margin-bottom: 200px;
+            }
+
+            .workCards {
+                width: 70%;
+                margin: 50px;
+            }
+        }
+
+        /* diri nako */
     </style>
 </head>
 
@@ -251,162 +318,159 @@
     </nav>
 
     <!-- End of Navigation -->
-    <section>
-        <div class="banner">
-            <img src="img/image 77.png" alt="">
-            <div class="centered">
-                <h1>About Us</h1>
-                <h3>Your learning buddy!</h3><br>
-            </div>
+
+    <!-- Main Content -->
+    <div class="banner">
+        <img src="img/image 77.png" alt="">
+        <div class="centered">
+            <h1>About Us</h1>
+            <h3>Your learning buddy!</h3><br>
         </div>
-        <!-- About -->
-        <div class="Overview">
-            <div class="viewLeft">
-                <img src="img/Group 2323.png" alt="">
-                <div class="Leftext">
-                    <p>
-                        KTEL Language School & Tutorial Services offers interactive live online classes for the
-                        following
-                        subjects : Englilsh, Math, Science, Mandarin and Spanish.
-                    </p>
-                </div>
+    </div>
 
-            </div>
-            <div class="viewRight">
-                <div class="rightext">
-                    <img src="img/KTEL-logo-removebg-preview.png" alt="">
-                    <p>
-                        KTEL offers a strong foundation for your children’s education.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="itWorks">
-            <h3>
-                <U>How it Works?</U>
-            </h3>
-            <div class="worksgrid">
-                <div class="workCards">
-                    <img src="img/WorkIcon1.png" alt="">
-                    <p>Select a Course or Services you wanted to take</p>
-
-                </div>
-                <div class="workCards">
-                    <img src="img/WorkIcon2.png" alt="">
-                    <p>Take and Pass the Quizzes</p>
-                </div>
-                <div class="workCards">
-                    <img src="img/WorkIcon3.png" alt="">
-                    <p>Pay and Receive your Certificate</p>
-                </div>
-            </div>
-        </div>
-        <!-- Mission and Vision -->
-        <div class="Overview">
-
-            <div class="viewRight">
-                <div class="rightext" style="width: 300px;margin-left: 150px;margin-top: 150px;text-align: left;">
-                    <h1>Our Vission</h1>
-                    <p style="text-align: left;">
-                        Our goal is to provide fun and meaningful learning experience for out learners at the comfort of
-                        their own homes.
-                    </p>
-                </div>
-            </div>
-            <div class="viewLeft">
-                <img src="img/Group 2324.png" alt="">
-                <div class="Leftext" style="width: 300px;left: 300px;">
-                    <h1>Our Mission</h1>
-                    <p style="text-align: left;">
-                        Our goal is to provide fun and meaningful learning experience for out learners at the comfort of
-                        their own homes.
-                    </p>
-                </div>
+    <div class="Overview">
+        <div class="viewLeft">
+            <img src="img/Group 2323.png" alt="">
+            <div class="Leftext">
+                <p>
+                    KTEL Language School & Tutorial Services offers interactive live online classes for the
+                    following
+                    subjects : Englilsh, Math, Science, Mandarin and Spanish.
+                </p>
             </div>
 
         </div>
-        <!-- Our Teachers -->
-        <h3 style="text-align: center;">
-            <U style="text-decoration-color: rgba(216, 29, 65, 1);">Our Dedicated Teachers</U>
+        <div class="viewRight">
+            <div class="rightext">
+                <img src="img/KTEL-logo-removebg-preview.png" alt="">
+                <p>
+                    KTEL offers a strong foundation for your children’s education.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="itWorks">
+        <h3>
+            <U>How it Works?</U>
         </h3>
-        <div class="boxTeach">
-            
-            <div class="cardTeach">
-                <div class="circle">
-                    <img src="img/Ellipse 512.png" alt="">
-                </div>
-                <span class="name">
-                    Junnalyn Doning
-                </span>
-                <span class="pos">Teacher</span>
-                <hr>
-                <div class="img">
-                    <a href="https://www.facebook.com/"><img
-                            src="https://cdn.iconscout.com/icon/free/png-256/free-facebook-logo-2019-1597680-1350125.png"
-                            alt=""></a>
-                    <a href="https://www.instagram.com/accounts/login"><img
-                            src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png"
-                            alt=""></a>
-                    <a href="https://twitter.com/"><img
-                            src="https://cdn.iconscout.com/icon/free/png-256/free-twitter-1865886-1581902.png"
-                            alt=""></a>
-                    <a href="https://mail.google.com/mail/u/0/#inbox"><img
-                            src="https://icon-library.com/images/icon-email/icon-email-5.jpg" alt=""></a>
+        <div class="worksgrid">
+            <div class="workCards">
+                <img src="img/WorkIcon1.png" alt="">
+                <p>Select a Course or Services you wanted to take</p>
 
-                </div>
             </div>
-            <div class="cardTeach">
-                <div class="circle">
-                    <img src="img/Ellipse 512.png" alt="">
-                </div>
-                <span class="name">
-                    Mary Grace Vellina
-                </span>
-                <span class="pos">Teacher</span>
-                <hr>
-                <div class="img">
-                    <a href="https://www.facebook.com/"><img
-                            src="https://cdn.iconscout.com/icon/free/png-256/free-facebook-logo-2019-1597680-1350125.png"
-                            alt=""></a>
-                    <a href="https://www.instagram.com/accounts/login"><img
-                            src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png"
-                            alt=""></a>
-                    <a href="https://twitter.com/"><img
-                            src="https://cdn.iconscout.com/icon/free/png-256/free-twitter-1865886-1581902.png"
-                            alt=""></a>
-                    <a href="https://mail.google.com/mail/u/0/#inbox"><img
-                            src="https://icon-library.com/images/icon-email/icon-email-5.jpg" alt=""></a>
-                </div>
+            <div class="workCards">
+                <img src="img/WorkIcon2.png" alt="">
+                <p>Take and Pass the Quizzes</p>
             </div>
-            <div class="cardTeach">
-                <div class="circle">
-                    <img src="img/Ellipse 512.png" alt="">
-                </div>
-                <span class="name">
-                    Ignacio Yurag
-                </span>
-                <span class="pos">Teacher</span>
-                <hr>
-                <div class="img">
-                    <a href="https://www.facebook.com/"><img
-                            src="https://cdn.iconscout.com/icon/free/png-256/free-facebook-logo-2019-1597680-1350125.png"
-                            alt=""></a>
-                    <a href="https://www.instagram.com/accounts/login"><img
-                            src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png"
-                            alt=""></a>
-                    <a href="https://twitter.com/"><img
-                            src="https://cdn.iconscout.com/icon/free/png-256/free-twitter-1865886-1581902.png"
-                            alt=""></a>
-                    <a href="https://mail.google.com/mail/u/0/#inbox"><img
-                            src="https://icon-library.com/images/icon-email/icon-email-5.jpg" alt=""></a>
-                </div>
+            <div class="workCards">
+                <img src="img/WorkIcon3.png" alt="">
+                <p>Pay and Receive your Certificate</p>
             </div>
         </div>
-        <div class="morebut1">
-            <button>View More</button>
+    </div>
+
+    <div class="Overview">
+
+        <div class="viewRight1">
+            <div class="rightext1">
+                <h1>Our Vission</h1>
+                <p style="text-align: left;">
+                    Our goal is to provide fun and meaningful learning experience for out learners at the comfort of
+                    their own homes.
+                </p>
+            </div>
         </div>
+        <div class="viewLeft1">
+            <img src="img/Group 2324.png" alt="">
+            <div class="Leftext1">
+                <h1>Our Mission</h1>
+                <p style="text-align: left;">
+                    Our goal is to provide fun and meaningful learning experience for out learners at the comfort of
+                    their own homes.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Our Teachers -->
+    <h3 style="text-align: center;">
+        <U style="text-decoration-color: rgba(216, 29, 65, 1);">Our Dedicated Teachers</U>
+    </h3>
+    <div class="boxTeach">
+
+        <div class="cardTeach">
+            <div class="circle">
+                <img src="img/Ellipse 512.png" alt="">
+            </div>
+            <span class="name">
+                Junnalyn Doning
+            </span>
+            <span class="pos">Teacher</span>
+            <hr>
+            <div class="img">
+                <a href="https://www.facebook.com/"><img
+                        src="https://cdn.iconscout.com/icon/free/png-256/free-facebook-logo-2019-1597680-1350125.png"
+                        alt=""></a>
+                <a href="https://www.instagram.com/accounts/login"><img
+                        src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png" alt=""></a>
+                <a href="https://twitter.com/"><img
+                        src="https://cdn.iconscout.com/icon/free/png-256/free-twitter-1865886-1581902.png" alt=""></a>
+                <a href="https://mail.google.com/mail/u/0/#inbox"><img
+                        src="https://icon-library.com/images/icon-email/icon-email-5.jpg" alt=""></a>
+
+            </div>
+        </div>
+        <div class="cardTeach">
+            <div class="circle">
+                <img src="img/Ellipse 512.png" alt="">
+            </div>
+            <span class="name">
+                Mary Grace Vellina
+            </span>
+            <span class="pos">Teacher</span>
+            <hr>
+            <div class="img">
+                <a href="https://www.facebook.com/"><img
+                        src="https://cdn.iconscout.com/icon/free/png-256/free-facebook-logo-2019-1597680-1350125.png"
+                        alt=""></a>
+                <a href="https://www.instagram.com/accounts/login"><img
+                        src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png" alt=""></a>
+                <a href="https://twitter.com/"><img
+                        src="https://cdn.iconscout.com/icon/free/png-256/free-twitter-1865886-1581902.png" alt=""></a>
+                <a href="https://mail.google.com/mail/u/0/#inbox"><img
+                        src="https://icon-library.com/images/icon-email/icon-email-5.jpg" alt=""></a>
+            </div>
+        </div>
+        <div class="cardTeach">
+            <div class="circle">
+                <img src="img/Ellipse 512.png" alt="">
+            </div>
+            <span class="name">
+                Ignacio Yurag
+            </span>
+            <span class="pos">Teacher</span>
+            <hr>
+            <div class="img">
+                <a href="https://www.facebook.com/"><img
+                        src="https://cdn.iconscout.com/icon/free/png-256/free-facebook-logo-2019-1597680-1350125.png"
+                        alt=""></a>
+                <a href="https://www.instagram.com/accounts/login"><img
+                        src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png" alt=""></a>
+                <a href="https://twitter.com/"><img
+                        src="https://cdn.iconscout.com/icon/free/png-256/free-twitter-1865886-1581902.png" alt=""></a>
+                <a href="https://mail.google.com/mail/u/0/#inbox"><img
+                        src="https://icon-library.com/images/icon-email/icon-email-5.jpg" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <div class="morebut1">
+        <button>View More</button>
+    </div>
     </section>
+
 
 
     <!-- Start of the Footer -->
