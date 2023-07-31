@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>KTEL | Pricing</title>
+    <style>
+        .firstDiv {
+            height: auto;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .firstDiv h1 {
+            text-align: center;
+            margin: 0;
+            font-size: 25pt;
+            font-weight: 600;
+        }
+
+        .firstDiv p {
+            text-align: center;
+        }
+
+        .pack {
+            width: 100%;
+            /* height: 100vh; */
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 140px 0;
+            position: relative;
+        }
+
+        .containerPrice {
+            text-align: center;
+            align-items: center;
+        }
+
+
+        .cardPrice {
+            position: relative;
+            max-width: 300px;
+            height: auto;
+            background-color: rgba(217, 217, 217, 1);
+            /* background: linear-gradient(-45deg, rgba(216, 29, 65, 1), rgba(51, 71, 255, 1)); */
+            border-radius: 15px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            -webkit-box-shadow: 0 10px 15px rgba(0, 0, 0, .1);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, .1);
+            -webkit-transition: .5s;
+            transition: .5s;
+            margin-top: 80px;
+        }
+
+        .cardPrice:hover {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.05);
+        }
+
+
+        .cardPrice::before {
+            content: '';
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            width: 100%;
+            height: 40%;
+            /* background: rgba(51, 71, 255, 1); */
+            background: rgba(216, 29, 65, 0.5);
+            z-index: 1;
+            -webkit-transform: skewY(-5deg) scale(1.5);
+            transform: skewY(-5deg) scale(1.5);
+        }
+
+        .title img {
+            font-size: 60px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 100px;
+            -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, .1);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+
+        }
+
+        .title1 img {
+            font-size: 60px;
+            width: 200px;
+            height: 150px;
+            border-radius: 20%;
+            text-align: center;
+            line-height: 100px;
+            -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, .1);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+
+        }
+
+        .title h2 {
+            position: relative;
+            margin: 20px 0 0;
+            padding: 0;
+            color: black;
+            font-size: 28px;
+            z-index: 2;
+        }
+
+        .price,
+        .option {
+            position: relative;
+            z-index: 2;
+        }
+
+        .price h4 {
+            margin: 0;
+            padding: 20px 0;
+            color: black;
+            font-size: 60px;
+            font-weight: 600;
+        }
+
+        .option ul {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .option ul li {
+            margin: 0 0 10px;
+            padding: 0;
+            list-style: none;
+            color: white;
+            font-size: 16px;
+        }
+
+        .option ul li i {
+            color: rgba(0, 97, 10, 1);
+        }
+
+        .cardPrice a {
+            position: relative;
+            z-index: 2;
+            background: rgba(51, 71, 255, 1);
+            /* background: rgba(216, 29, 65, 1); */
+            color: white;
+            width: 150px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 40px;
+            display: block;
+            text-align: center;
+            margin: 20px auto 0;
+            font-size: 16px;
+            cursor: pointer;
+            -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+
+        }
+
+        .cardPrice a:hover {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/KTEL-logo-removebg-preview.png" alt="">
+            </a>
+
+        </div>
+        <div class="conNav">
+            <ul class="nav-links">
+                <li><a href="aboutUs.html">About Us</a></li>
+                <li class="dropbtn"><a href="packages.html">Services</a>
+                    <i class="fa fa-caret-down"></i>
+                    <div class="dropdown-content">
+                        <a href="packages.html">Packages</a>
+                        <a href="#">Language Tutorial Services</a>
+                        <a href="pricing.html">Services Pricing</a>
+                    </div>
+                </li>
+                <li class="dropbtn"><a href="">How it Works</a>
+                    <i class="fa fa-caret-down"></i>
+                    <div class="dropdown-content">
+                        <a href="#">How to Pay</a>
+                    </div>
+                </li>
+                <li><a href="teacher.html">Our Teachers</a></li>
+                <li><a href="testimonial.html">Testimonials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="register.html"><button>Login/Register</button></a></li>
+            </ul>
+            <div class="burger">
+                <div class="ham-burger"></div>
+            </div>
+        </div>
+
+
+    </nav>
+
+    <!-- End of Navigation -->
+    <section>
+        <div class="banner">
+            <img src="img/PricingBanner.png" alt="">
+            <div class="centered">
+                <h1>Pricing</h1>
+                <h3>Affordable way to learn</h3><br>
+
+            </div>
+        </div>
+
+        <div class="firstDiv">
+            <h1><b style="color: rgba(0, 97, 10, 1);">Our</b> <b style="color: rgba(218, 50, 75, 1)">Pricing</b> <b
+                    style="color: rgba(39, 159, 214, 1)">Plans</b> </h1>
+            <p> Let your Kids learn with us!</p>
+        </div>
+
+        <div class="pack">
+
+            <div class="container-fluid">
+
+                <div class="containerPrice">
+                    <h2 style="margin-top: -100px;">Packages</h2>
+                    <div class="rowPrice">
+                        <div class="col-sm-6">
+                            <div class="cardPrice text-center">
+                                <div class="title">
+                                    <img src="img/learning to read.png" alt="">
+                                    <!-- <i class="fa fa-paper-plane" aria-hidden="true"></i> -->
+                                    <h2>Kinder Home Kits</h2>
+                                </div>
+                                <div class="price">
+                                    <h4><sup>$</sup>25</h4>
+                                </div>
+                                <div class="option">
+                                    <ul>
+                                        <li> <i class="fa fa-check" aria-hidden="true"></i> Learn to Read </li>
+                                        <li> <i class="fa fa-check" aria-hidden="true"></i> It’s Fun to Read </li>
+                                        <li> <i class="fa fa-check" aria-hidden="true"></i> I’m Reading </li>
+                                        <li> <i class="fa fa-check" aria-hidden="true"></i> ABC’s and Rhymes </li>
+                                        <li> <i class="fa fa-check" aria-hidden="true"></i> Learn to Count </li>
+                                    </ul>
+                                </div>
+                                <a href="#">Buy Now </a>
+                            </div>
+                        </div>
+                        <!-- END Col one -->
+                        <div class="col-sm-6">
+                            <div class="cardPrice text-center">
+                                <div class="title">
+                                    <img src="img/image 101.png" alt="">
+                                    <h2>Motion Songs</h2>
+                                </div>
+                                <div class="price">
+                                    <h4><sup>$</sup>50</h4>
+                                </div>
+                                <div class="option">
+                                    <ul>
+                                        <li> <i class="fa fa-check" aria-hidden="true"></i> Color Motion Song </li>
+                                        <li> <i class="fa fa-check" aria-hidden="true"></i> Number Motion Song </li>
+                                        <li> <i class="fa fa-check" aria-hidden="true"></i> Phonics Motion Song </li>
+                                        <li> <i class="fa fa-check" aria-hidden="true"></i> Seasonal Motion Song </li>
+                                        <li> <i class="fa fa-check" aria-hidden="true"></i></i> Art Motion Song </li>
+
+                                    </ul>
+                                </div>
+                                <a href="#">Buy Now </a>
+                            </div>
+                        </div>
+                        <!-- END Col two -->
+                        <div class="col-sm-6">
+                            <div class="cardPrice text-center">
+                                <div class="title">
+                                    <img src="img/image 95.png" alt="">
+                                    <h2>Nursery Rhymes</h2>
+                                </div>
+                                <div class="price">
+                                    <h4><sup>$</sup>100</h4>
+                                </div>
+                                <div class="option">
+                                    <ul>
+                                        <li> <i class="fa fa-check" aria-hidden="true"></i> Nursery rhymes have proved
+                                            to be an invaluable
+                                            educational tool. </li>
+                                        <li> <i class="fa fa-check" aria-hidden="true"></i> Helps children to develop
+                                            their memory and
+                                            improving their performance in school. </li>
+
+                                    </ul>
+                                </div>
+                                <a href="#">Buy Now </a>
+                            </div>
+                        </div>
+                        <!-- END Col three -->
+                        <div class="col-sm-6">
+                            <div class="cardPrice text-center">
+                                <div class="title">
+                                    <img src="img/Group 2285.png" alt="">
+                                    <h2>Nursery Rhymes</h2>
+                                </div>
+                                <div class="price">
+                                    <h4><sup>$</sup>100</h4>
+                                </div>
+                                <div class="option">
+                                    <ul>
+                                        <li> <i class="fa fa-check" aria-hidden="true"></i> English </li>
+                                        <li> <i class="fa fa-check" aria-hidden="true"></i> Mathematics </li>
+                                        <li> <i class="fa fa-check" aria-hidden="true"></i> Science </li>
+                                        <li> <i class="fa fa-check" aria-hidden="true"></i> Geography </li>
+                                        <li> <i class="fa fa-check" aria-hidden="true"></i> More </li>
+
+
+                                    </ul>
+                                </div>
+                                <a href="#">Buy Now </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Language Tutorial Services -->
+            <div class="container-fluid">
+
+                <div class="containerPrice">
+                    <h2 style="margin-top: 100px;">Language Tutorial Services</h2>
+                    <div class="rowPrice">
+                        <div class="col-sm-6">
+                            <div class="cardPrice text-center">
+                                <div class="title1">
+                                    <img src="img/IndividualRate.png" alt="">
+                                    <!-- <i class="fa fa-paper-plane" aria-hidden="true"></i> -->
+                                    <h2>Individual Rate</h2>
+                                </div>
+                                <div class="price">
+                                    <h4><sup>₱</sup>5,500</h4>
+                                </div>
+                                <div class="option">
+                                    <ul>
+                                        <li> <i class="fa fa-check" aria-hidden="true"></i> Choose A Language you want
+                                            to learn </li>
+                                        <li> <i class="fa fa-check" aria-hidden="true"></i> One language 12 Sessions
+                                        </li>
+                                        <!-- <li> <i class="fa fa-check" aria-hidden="true"></i> I’m Reading </li>
+                          <li> <i class="fa fa-check" aria-hidden="true"></i> ABC’s and Rhymes </li>
+                          <li> <i class="fa fa-check" aria-hidden="true"></i> Learn to Count </li> -->
+                                    </ul>
+                                </div>
+                                <a href="#">Join Now </a>
+                            </div>
+                        </div>
+                        <!-- END Col one -->
+                        <div class="col-sm-6">
+                            <div class="cardPrice text-center">
+                                <div class="title1">
+                                    <img src="img/GrpRate.png" alt="">
+                                    <h2>Group Rate</h2>
+                                </div>
+                                <div class="price">
+                                    <h4><sup>₱</sup>50</h4>
+                                </div>
+                                <div class="option">
+                                    <ul>
+                                        <li> <i class="fa fa-check" aria-hidden="true"></i> Choose A Language you want
+                                            to learn </li>
+                                        <li> <i class="fa fa-check" aria-hidden="true"></i> Maximum of 3 Members in a
+                                            group </li>
+                                        <!-- <li> <i class="fa fa-check" aria-hidden="true"></i> Phonics Motion Song </li>
+                          <li> <i class="fa fa-check" aria-hidden="true"></i> Seasonal Motion Song </li>
+                          <li> <i class="fa fa-check" aria-hidden="true"></i></i> Art Motion Song </li> -->
+
+                                    </ul>
+                                </div>
+                                <a href="#">Join Now </a>
+                            </div>
+                        </div>
+                        <!-- END Col two -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <hr>
+    <!-- Start of the Footer -->
+    <footer style="margin-top: 20px;">
+        <div class="footer-wrap">
+            <div class="widgetFooter" id="footerLogo">
+                <img src="img/KTEL-logo-removebg-preview.png" alt="Logo">
+            </div>
+            <div class="widgetFooter">
+
+                <h4 class="uppercase">useful links</h4>
+                <ul id="footerUsefulLink">
+                    <li title="About US">
+
+                        <a>&nbsp;About us</a>
+                    </li>
+                    <li title="Servicers">
+
+                        <a>&nbsp;Services</a>
+                    </li>
+                    <li title="Works">
+
+                        <a>&nbsp;How It Works</a>
+                    </li>
+                    <li title="Teachers">
+
+                        <a>&nbsp;Our Teachers</a>
+                    </li>
+                    <li title="Contact Us">
+
+                        <a>&nbsp;Contact us</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="widgetFooter">
+                <h4 class="uppercase">Social media links</h4>
+                <ul id="footerMediaLinks">
+                    <li class="media1" title="Facebook">
+                        <span class="mediaLinksIcons fb">
+                            <i class="fab fa-facebook-square"></i>
+                        </span>
+                        <a class="fb">&nbsp;facebook</a>
+                    </li>
+                    <li class="media2" title="Twitter">
+                        <span class="mediaLinksIcons twit">
+                            <i class="fab fa-twitter-square"></i>
+                        </span>
+                        <a class="twit">&nbsp;Twitter</a>
+                    </li>
+                    <li class="media3" title="Instagram">
+                        <span class="mediaLinksIcons insta">
+                            <i class="fab fa-instagram"></i>
+                        </span>
+                        <a class="insta">&nbsp;instagram</a>
+                    </li>
+                    <li class="media4" title="Github">
+                        <span class="mediaLinksIcons git">
+                            <i class="fab fa-github-alt"></i>
+                        </span>
+                        <a class="git">&nbsp;Github</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footerCopy">
+            <div class="inb">
+                <p>@ 2023 KidsTalk E-Learning<sup></sup>.All Right Reserved. </p>
+            </div>
+        </div>
+    </footer>
+    <!-- End of the Footer -->
+    <script>
+        const navSlide = () => {
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('.nav-links');
+            const navLinks = document.querySelectorAll('nav .nav-links li');
+
+            burger.addEventListener('click', () => {
+                nav.classList.toggle('nav-active');
+                navLinks.forEach((links, index) => {
+                    if (links.style.animation) { links.style.animation = '' }
+                    else {
+                        links.style.animation = `navLinksFade 0.5s ease forwards ${index / 5}s`
+                    }
+                });
+                burger.classList.toggle('toggle');
+            });
+        }
+        navSlide();
+    </script>
+</body>
+
+
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>KTEL | Packages</title>
+    <style>
+        .firstDiv {
+            height: auto;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .firstDiv h1 {
+            text-align: center;
+            margin: 0;
+            font-size: 25pt;
+            font-weight: 600;
+        }
+
+        .firstDiv p {
+            text-align: center;
+        }
+
+        #some-box {
+            background: #fff;
+            padding: 40px 0px 80px;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        #some-box h1 {
+            text-align: center;
+            color: black;
+            margin: 10%;
+        }
+
+        #some-box a {
+            color: #70BCB8;
+            text-decoration: none;
+            display: block;
+            font-weight: bold;
+        }
+
+        #some-box a:hover {
+            color: #8E7BB2;
+        }
+
+        article.row {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 45px 0;
+        }
+
+        article.row button {
+            height: 30px;
+            border-radius: 20px;
+            width: 150px;
+            color: whitesmoke;
+            border: none;
+            background-color: rgba(51, 71, 255, 1);
+            margin-top: 15px;
+        }
+
+        article.row button:hover {
+            background-color: rgba(216, 29, 65, 1);
+            cursor: pointer;
+        }
+
+        article.row h3 {
+            color: rgba(0, 97, 10, 1);
+        }
+
+        article.row div {
+            width: 49.4%;
+            display: inline-block;
+            position: relative;
+            border: 1px solid white;
+        }
+
+
+        #idea-one img,
+        #idea-two img,
+        #idea-three img {
+            position: absolute;
+            bottom: -20px;
+            left: 50px;
+            height: 200px;
+        }
+
+
+        @media(max-width:750px) {
+
+            article.row div {
+                min-width: 300px;
+                width: 90%;
+                margin: 0 5%;
+                text-align: center;
+                display: block;
+            }
+
+            /* Center your text */
+            #some-other-box h3 {
+                text-align: center;
+            }
+
+            /* Center your image */
+            #idea-one img,
+            #idea-two img,
+            #idea-three img {
+                position: relative;
+                margin: auto;
+                left: inherit;
+                bottom: inherit;
+            }
+
+            #idea-two {
+                display: -webkit-box;
+                display: -moz-box;
+                display: box;
+                -webkit-box-orient: vertical;
+                -moz-box-orient: vertical;
+                box-orient: vertical;
+            }
+
+
+            #idea-two div:first-of-type {
+                -webkit-box-ordinal-group: 2;
+                -moz-box-ordinal-group: 2;
+                box-ordinal-group: 2;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/KTEL-logo-removebg-preview.png" alt="">
+            </a>
+
+        </div>
+        <div class="conNav">
+            <ul class="nav-links">
+                <li><a href="aboutUs.html">About Us</a></li>
+                <li class="dropbtn"><a href="packages.html">Services</a>
+                    <i class="fa fa-caret-down"></i>
+                    <div class="dropdown-content">
+                        <a href="packages.html">Packages</a>
+                        <a href="#">Language Tutorial Services</a>
+                        <a href="pricing.html">Services Pricing</a>
+                    </div>
+                </li>
+                <li class="dropbtn"><a href="">How it Works</a>
+                    <i class="fa fa-caret-down"></i>
+                    <div class="dropdown-content">
+                        <a href="#">How to Pay</a>
+                    </div>
+                </li>
+                <li><a href="teacher.html">Our Teachers</a></li>
+                <li><a href="testimonial.html">Testimonials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="register.html"><button>Login/Register</button></a></li>
+            </ul>
+            <div class="burger">
+                <div class="ham-burger"></div>
+            </div>
+        </div>
+
+
+    </nav>
+
+    <!-- End of Navigation -->
+    <section>
+        <div class="banner">
+            <img src="img/PackageBanner.png" alt="">
+            <div class="centered">
+                <h1>Services</h1>
+                <h3>Offered Packages</h3><br>
+
+            </div>
+        </div>
+
+        <div class="firstDiv">
+            <h1><b style="color: rgba(0, 97, 10, 1);">Our</b> <b style="color: rgba(218, 50, 75, 1)">Offered</b> <b
+                    style="color: rgba(39, 159, 214, 1)">Special</b> <b
+                    style="color: rgba(105, 62, 151, 1)">Packages</b></h1>
+            <p> Let your Kids learn with us!</p>
+        </div>
+
+        <div id="some-box">
+
+
+            <article class="row" id="idea-one">
+
+                <div class="sidePic"><img src="img/learning to read.png" /></div>
+                <div>
+                    <h3>Kinder Home Kits</h3>
+                    <p>This package contains the following topics:
+                        <br> &nbsp;&nbsp;&nbsp;&nbsp; Learn to Read
+                        <br> &nbsp;&nbsp;&nbsp;&nbsp; It’s Fun to Read
+                        <br> &nbsp;&nbsp;&nbsp; I’m Reading
+                        <br> &nbsp;&nbsp;&nbsp;&nbsp; ABC’s and Rhymes
+                        <br> &nbsp;&nbsp;&nbsp; Learn to Count
+                    </p>
+                    <button>Read more</button>
+                    <!-- <a href="#">Read more</a> -->
+                </div>
+            </article>
+
+            <article class="row" id="idea-two">
+                <div>
+                    <h3>Motion Songs</h3>
+                    <p>This package contains the following topics:
+                        <br> &nbsp;&nbsp;&nbsp;&nbsp; Color Motion Song
+                        <br> &nbsp;&nbsp;&nbsp;&nbsp; Number Motion Song
+                        <br> &nbsp;&nbsp;&nbsp; Phonics Motion Song
+                        <br> &nbsp;&nbsp;&nbsp;&nbsp; Seasonal Motion Song
+                        <br> &nbsp;&nbsp;&nbsp; Art Motion Song
+                    </p>
+                    <button>Read more</button>
+                    <!-- <a href="#">Read more</a> -->
+                </div>
+                <div class="sidePic"><img src="img/image 101.png" /></div>
+            </article>
+
+            <article class="row" id="idea-three">
+                <h1>KINDER LESSONS</h1>
+                <div class="sidePic"><img src="img/image 95.png" /></div>
+                <div>
+                    <h3>Nursery Rhymes</h3>
+                    <p>Nursery rhymes have proved to be an invaluable educational tool, helping your children to develop
+                        their
+                        memory and improving their performance in school. </p>
+                    <button>Read more</button>
+                </div>
+            </article>
+
+            <article class="row" id="idea-two">
+                <h1>Other Packages</h1>
+                <div>
+                    <h3>Primary Level Lessons</h3>
+                    <p>This package contains the following primary subjects:
+                        <br> &nbsp;&nbsp;&nbsp;&nbsp; English
+                        <br> &nbsp;&nbsp;&nbsp;&nbsp; Math
+                        <br> &nbsp;&nbsp;&nbsp; Science
+                        <br> &nbsp;&nbsp;&nbsp;&nbsp; Geography
+                        <br> &nbsp;&nbsp;&nbsp; Technology
+                        <br> &nbsp;&nbsp;&nbsp; History
+                        <br> &nbsp;&nbsp;&nbsp; ICT
+                    </p>
+                    <button>Read more</button>
+                </div>
+                <div class="sidePic"><img src="img/Group 2285.png" /></div>
+            </article>
+
+        </div>
+
+    </section>
+
+    <!-- Start of the Footer -->
+    <footer>
+        <div class="footer-wrap">
+            <div class="widgetFooter" id="footerLogo">
+                <img src="img/KTEL-logo-removebg-preview.png" alt="Logo">
+            </div>
+            <div class="widgetFooter">
+
+                <h4 class="uppercase">useful links</h4>
+                <ul id="footerUsefulLink">
+                    <li title="About US">
+
+                        <a>&nbsp;About us</a>
+                    </li>
+                    <li title="Servicers">
+
+                        <a>&nbsp;Services</a>
+                    </li>
+                    <li title="Works">
+
+                        <a>&nbsp;How It Works</a>
+                    </li>
+                    <li title="Teachers">
+
+                        <a>&nbsp;Our Teachers</a>
+                    </li>
+                    <li title="Contact Us">
+
+                        <a>&nbsp;Contact us</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="widgetFooter">
+                <h4 class="uppercase">Social media links</h4>
+                <ul id="footerMediaLinks">
+                    <li class="media1" title="Facebook">
+                        <span class="mediaLinksIcons fb">
+                            <i class="fab fa-facebook-square"></i>
+                        </span>
+                        <a class="fb">&nbsp;facebook</a>
+                    </li>
+                    <li class="media2" title="Twitter">
+                        <span class="mediaLinksIcons twit">
+                            <i class="fab fa-twitter-square"></i>
+                        </span>
+                        <a class="twit">&nbsp;Twitter</a>
+                    </li>
+                    <li class="media3" title="Instagram">
+                        <span class="mediaLinksIcons insta">
+                            <i class="fab fa-instagram"></i>
+                        </span>
+                        <a class="insta">&nbsp;instagram</a>
+                    </li>
+                    <li class="media4" title="Github">
+                        <span class="mediaLinksIcons git">
+                            <i class="fab fa-github-alt"></i>
+                        </span>
+                        <a class="git">&nbsp;Github</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footerCopy">
+            <div class="inb">
+                <p>@ 2023 KidsTalk E-Learning<sup></sup>.All Right Reserved. </p>
+            </div>
+        </div>
+    </footer>
+    <!-- End of the Footer -->
+    <script>
+        const navSlide = () => {
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('.nav-links');
+            const navLinks = document.querySelectorAll('nav .nav-links li');
+
+            burger.addEventListener('click', () => {
+                nav.classList.toggle('nav-active');
+                navLinks.forEach((links, index) => {
+                    if (links.style.animation) { links.style.animation = '' }
+                    else {
+                        links.style.animation = `navLinksFade 0.5s ease forwards ${index / 5}s`
+                    }
+                });
+                burger.classList.toggle('toggle');
+            });
+        }
+        navSlide();
+    </script>
+</body>
+
+
+</html>
