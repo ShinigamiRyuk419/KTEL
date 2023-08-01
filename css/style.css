@@ -137,7 +137,7 @@ nav {
       height: 90vh;
       top: 10vh;
       right: 0;
-      background-color: rgba(51, 71, 255, 1);
+      background-color: rgba(216, 29, 65, 0.9);
       width: 50%;
       transform: translateX(100%);
       transition: transform 0.5s ease-in;
@@ -205,17 +205,23 @@ nav {
   }
 
   @media only screen and (max-width:1155px) {
-    
+    .dropdown-content {
+        position:relative;
+        justify-content: center;
+    }
 
     .dropdown-content a{
         background-color: gray;
-        display: none;
+        display: flex;
+        padding: 5px;
+        z-index: 2;
     }
     .dropdown-content a:hover {
-        background-color: red;
+        background-color: rgba(51, 71, 255, 1);
       }
       
   }
+
 
 
 /* End of navigation */
