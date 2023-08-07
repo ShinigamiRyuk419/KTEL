@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>KTEL | Language</title>
+    <style>
+        .firstDiv {
+            height: auto;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .firstDiv h1 {
+            text-align: center;
+            margin: 0;
+            font-size: 25pt;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+
+        .firstDiv p {
+            text-align: center;
+        }
+
+        .cards_wrap {
+            padding: 20px;
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            background-color: rgba(105, 179, 211, 0.47);
+            border-radius: 20px;
+            margin: 5%;
+        }
+
+        .cards_wrap .card_item {
+            padding: 15px 25px;
+            width: 22%;
+        }
+
+        .cards_wrap .card_inner {
+            background: rgba(218, 50, 75, 0.32);
+            border-radius: 5px;
+            padding: 15px 20px;
+            width: 20%;
+            height: auto;
+            width: 100%;
+
+        }
+
+        .cards_wrap .card_item img {
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        .cards_wrap .card_item .role_name {
+            color: #e36686;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 15px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-left: 25%;
+            margin-top: -48px;
+            /* float: right; */
+        }
+
+
+        .cards_wrap .card_item .real_name {
+            color: black;
+            font-size: 12px;
+            font-weight: 100;
+            margin: 5px 0 10px;
+            margin-left: 25%;
+        }
+
+        .cards_wrap .card_item .film {
+            font-size: 14px;
+            line-height: 24px;
+            color: #7b8ca0;
+        }
+
+        @media screen and (max-width: 1024px) {
+            .cards_wrap .card_item {
+                width: 33%;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .cards_wrap .card_item {
+                width: 50%;
+            }
+
+            .wrapper .header {
+                font-size: 16px;
+                height: 60px;
+            }
+        }
+
+        @media screen and (max-width: 568px) {
+            .cards_wrap .card_item {
+                width: 100%;
+            }
+
+            .wrapper .header {
+                font-size: 14px;
+            }
+        }
+
+        .secGroup {
+            position: relative;
+        }
+
+        .row {
+            align-items: center;
+            justify-content: center;
+        }
+
+        .column {
+            align-items: center;
+            float: left;
+            width: 50%;
+            padding: 0 8% 2% 8%;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            padding: 16px;
+            text-align: center;
+            background-color: whitesmoke;
+            height: 300px;
+            border-radius: 30px;
+            border-bottom: 1px;
+            /* box-shadow: 0 1px 10px #0b0a0a; */
+        }
+
+        .card img {
+            width: 50%;
+        }
+
+        .card button {
+            height: 30px;
+            width: 150px;
+            border-radius: 20px;
+            border: 1px;
+            background-color: rgba(216, 29, 65, 1);
+            color: whitesmoke;
+        }
+
+        @media screen and (max-width: 600px) {
+            .column {
+                width: 100%;
+                display: block;
+                margin-bottom: 20px;
+            }
+        }
+
+
+        /* for list of teachers style */
+        .boxTeach {
+            grid-column: 2 / span 12;
+            display: grid;
+            grid-template-columns: repeat(8, minmax(auto, 80px));
+            grid-gap: 40px;
+            grid-row-gap: 100px;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 0;
+            /* background-color: red; */
+        }
+
+        .cardTeach {
+            grid-column-end: span 8;
+            display: flex;
+            flex-direction: column;
+            background-color: #d4d4d6f1;
+            cursor: pointer;
+            transition: all 0.3s ease 0s;
+            box-shadow: 1px 1px 5px rgb(9, 9, 9);
+            border-radius: 30px;
+
+
+        }
+
+        .cardTeach:hover {
+            transform: translateY(-7px);
+        }
+
+        .content {
+            color: #262626;
+            /* margin-top: 50px; */
+            text-align: left;
+            margin-left: 62px;
+        }
+
+        .Sched {
+            float: left;
+            margin-left: 50px;
+            margin-bottom: 20px;
+        }
+        .Sched span{
+            font-size: 12px;
+            color: rgba(23, 123, 173, 1);
+        }
+        .Sched img{
+            height: 20px;
+        }
+
+        .Sched1 {
+            float: right;
+            margin-right: 50px;
+            margin-bottom: 20px;
+        }
+
+        .Sched1 button {
+            height: 30px;
+            width: 150px;
+            border: none;
+            border-radius: 20px;
+            background-color: rgba(51, 71, 255, 1);
+            color: white;
+            cursor: pointer;
+        }
+
+
+        .cardTeach .circle {
+            /* margin: auto; */
+            float: left;
+            margin-left: -50px;
+            margin-top: -50px;
+            background-color: rgb(84, 173, 237);
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            /* padding: 30px; */
+
+        }
+
+        .cardTeach .circle img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 1px 2px rgba(51, 71, 255, 1);
+        }
+
+        .name {
+            margin-top: -40px;
+            margin-left: 60px;
+            display: flex;
+            color: rgba(51, 71, 255, 1);
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 10pt;
+            line-height: 27px;
+            /* text-shadow: 5px 5px 3px black; */
+        }
+
+        .pos {
+            margin-left: 57px;
+            display: flex;
+            color: black;
+            text-transform: capitalize;
+            font-weight: 400;
+            font-size: 10px;
+            padding: 5px;
+            /* margin-bottom: 30px; */
+            /* text-shadow: 5px 5px 3px black; */
+        }
+
+
+        .cardTeach .Icons {
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .cardTeach .Icons img {
+            height: 20px;
+        }
+
+        @media only screen and (max-width: 1000px) {
+            .cardTeach {
+                grid-column-end: span 7;
+            }
+
+            .boxTeach {
+                padding: 20px;
+            }
+        }
+
+        @media only screen and (max-width: 700px) {
+            .boxTeach {
+                padding: 20px;
+                margin-left: 100px;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+          
+
+            .boxTeach {
+                padding: 20px;
+                grid-column: 2 / span 6;
+                grid-template-columns: repeat(6, 1fr);
+                margin-top: 50px;
+            }
+
+            .cardTeach {
+                grid-column-end: span 6;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/KTEL-logo-removebg-preview.png" alt="">
+            </a>
+
+        </div>
+        <div class="conNav">
+            <ul class="nav-links">
+                <li><a href="aboutUs.html">About Us</a></li>
+                <li class="dropbtn"><a href="packages.html">Services</a>
+                    <i class="fa fa-caret-down"></i>
+                    <div class="dropdown-content">
+                        <a href="packages.html">Packages</a>
+                        <a href="language.html">Language Tutorial Services</a>
+                        <a href="pricing.html">Services Pricing</a>
+                    </div>
+                </li>
+                <li class="dropbtn"><a href="">How it Works</a>
+                    <i class="fa fa-caret-down"></i>
+                    <div class="dropdown-content">
+                        <a href="#">How to Pay</a>
+                    </div>
+                </li>
+                <li><a href="teacher.html">Our Teachers</a></li>
+                <li><a href="testimonial.html">Testimonials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="register.html"><button>Login/Register</button></a></li>
+            </ul>
+            <div class="burger">
+                <div class="ham-burger"></div>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- End of Navigation -->
+    <section>
+        <div class="banner">
+            <img src="img/languageBanner.png" alt="">
+            <div class="centered">
+                <h1>Services</h1>
+                <h3>Language Tutorials</h3><br>
+
+            </div>
+        </div>
+
+        <div class="firstDiv">
+            <h1><b style="color: rgba(0, 97, 10, 1);">Language</b> <b style="color: rgba(218, 50, 75, 1)">Tutorial</b>
+                <b style="color: rgba(39, 159, 214, 1)">Services</b>
+            </h1>
+            <p> Let your Kids learn with us!</p>
+        </div>
+
+
+        <!-- list of language  -->
+        <div class="wrapper">
+            <div class="cards_wrap">
+                <div class="card_item">
+                    <div class="card_inner">
+                        <img src="img/English.png">
+                        <div class="role_name">English</div>
+                        <div class="real_name">5 Teachers</div>
+
+                    </div>
+                </div>
+                <div class="card_item">
+                    <div class="card_inner">
+                        <img src="img/Mandarin.png">
+                        <div class="role_name">Mandarin</div>
+                        <div class="real_name">5 Teachers</div>
+                    </div>
+                </div>
+                <div class="card_item">
+                    <div class="card_inner">
+                        <img src="img/Japanese.png">
+                        <div class="role_name">Japanese</div>
+                        <div class="real_name">5 Teachers</div>
+                    </div>
+                </div>
+                <div class="card_item">
+                    <div class="card_inner">
+                        <img src="img/French.png">
+                        <div class="role_name">French</div>
+                        <div class="real_name">5 Teachers</div>
+                    </div>
+                </div>
+                <div class="card_item">
+                    <div class="card_inner">
+                        <img src="img/Spanish.png">
+                        <div class="role_name">Spanish</div>
+                        <div class="real_name">5 Teachers</div>
+                    </div>
+                </div>
+                <div class="card_item">
+                    <div class="card_inner">
+                        <img src="img/Korean.png">
+                        <div class="role_name">Korean</div>
+                        <div class="real_name">5 Teachers</div>
+                    </div>
+                </div>
+                <div class="card_item">
+                    <div class="card_inner">
+                        <img src="img/Thai.png">
+                        <div class="role_name">Thai</div>
+                        <div class="real_name">5 Teachers</div>
+                    </div>
+                </div>
+                <div class="card_item">
+                    <div class="card_inner">
+                        <img src="img/Vietnamese.png">
+                        <div class="role_name">Vietnamese</div>
+                        <div class="real_name">5 Teachers</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="secGroup">
+            <div class="row">
+                <div class="column">
+                    <div class="card">
+                        <img src="img/IndividualRate.png" alt="" height="200px">
+                        <br>
+                        <button>INDIVIDUAL</button>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="card">
+                        <img src="img/GrpRate.png" alt="" height="170px">
+                        <br><br>
+                        <button>GROUP</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- List of teachers -->
+
+        <div class="boxTeach">
+            <div class="cardTeach">
+                <div class="circle">
+                    <img src="https://static.wikia.nocookie.net/tokyoghoul/images/a/a4/Hinami_02.png/revision/latest?cb=20140711071508"
+                        alt="">
+                </div>
+                <span class="name">
+                    Rio Atamosa
+                </span>
+                <span class="pos">English Tutor</span>
+                <p class="content">
+                    Licensed Professional Teacher with over 10 year of Teaching Experience
+                </p>
+
+
+                <div class="footnote">
+                    <div class="Sched">
+                        <img src="img/Cale.png" alt="">
+                        <span>Available Every Tuesday 16:30</span>
+                    </div>
+                    <div class="Sched1">
+                        <button>Book Now!</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="cardTeach">
+                <div class="circle">
+                    <img src="https://fortnite.gg/img/items/8021/icon.png?4" alt="">
+                </div>
+                <span class="name">
+                    Rio Atamosa
+                </span>
+                <span class="pos">English Tutor</span>
+                <p class="content">
+                    Licensed Professional Teacher with over 10 year of Teaching Experience
+                </p>
+
+
+                <div class="footnote">
+                    <div class="Sched">
+                        <img src="img/Cale.png" alt="">
+                        <span>Available Every Tuesday 16:30</span>
+                    </div>
+                    <div class="Sched1">
+                        <button>Book Now!</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="cardTeach">
+                <div class="circle">
+                    <img src="https://easydrawingguides.com/wp-content/uploads/2017/05/how-to-draw-naruto-20.png"
+                        alt="">
+                </div>
+                <span class="name">
+                    Rio Atamosa
+                </span>
+                <span class="pos">English Tutor</span>
+                <p class="content">
+                    Licensed Professional Teacher with over 10 year of Teaching Experience
+                </p>
+
+
+                <div class="footnote">
+                    <div class="Sched">
+                        <img src="img/Cale.png" alt="">
+                        <span>Available Every Tuesday 16:30</span>
+                    </div>
+                    <div class="Sched1">
+                        <button>Book Now!</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="cardTeach">
+                <div class="circle">
+                    <img src="https://static.wikia.nocookie.net/characterprofile/images/e/e6/Light_Yagami.png/revision/latest?cb=20160111184904"
+                        alt="">
+                </div>
+                <span class="name">
+                    Rio Atamosa
+                </span>
+                <span class="pos">English Tutor</span>
+                <p class="content">
+                    Licensed Professional Teacher with over 10 year of Teaching Experience
+                </p>
+
+
+                <div class="footnote">
+                    <div class="Sched">
+                        <img src="img/Cale.png" alt="">
+                        <span>Available Every Tuesday 16:30</span>
+                    </div>
+                    <div class="Sched1">
+                        <button>Book Now!</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cardTeach">
+                <div class="circle">
+                    <img src="https://i0.wp.com/borutoexplorer.com.br/wp-content/uploads/2022/02/boruto-123.png?fit=1000%2C732&ssl=1"
+                        alt="">
+                </div>
+                <span class="name">
+                    Rio Atamosa
+                </span>
+                <span class="pos">English Tutor</span>
+                <p class="content">
+                    Licensed Professional Teacher with over 10 year of Teaching Experience
+                </p>
+
+                <div class="footnote">
+                    <div class="Sched">
+                        <img src="img/Cale.png" alt="">
+                        <span>Available Every Tuesday 16:30</span>
+                    </div>
+                    <div class="Sched1">
+                        <button>Book Now!</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="cardTeach">
+                <div class="circle">
+                    <img src="https://wallpapercave.com/wp/wp10255862.png" alt="">
+                </div>
+                <span class="name">
+                    Rio Atamosa
+                </span>
+                <span class="pos">English Tutor</span>
+                <p class="content">
+                    Licensed Professional Teacher with over 10 year of Teaching Experience
+                </p>
+
+                <div class="footnote">
+                    <div class="Sched">
+                        <img src="img/Cale.png" alt="">
+                        <span>Available Every Tuesday 16:30</span>
+                    </div>
+                    <div class="Sched1">
+                        <button>Book Now!</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="cardTeach">
+                <div class="circle">
+                    <img src="https://wallpapercave.com/wp/wp10255862.png" alt="">
+                </div>
+                <span class="name">
+                    Rio Atamosa
+                </span>
+                <span class="pos">English Tutor</span>
+                <p class="content">
+                    Licensed Professional Teacher with over 10 year of Teaching Experience
+                </p>
+
+                <div class="footnote">
+                    <div class="Sched">
+                        <img src="img/Cale.png" alt="">
+                        <span>Available Every Tuesday 16:30</span>
+                    </div>
+                    <div class="Sched1">
+                        <button>Book Now!</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="cardTeach">
+                <div class="circle">
+                    <img src="https://wallpapercave.com/wp/wp10255862.png" alt="">
+                </div>
+                <span class="name">
+                    Rio Atamosa
+                </span>
+                <span class="pos">English Tutor</span>
+                <p class="content">
+                    Licensed Professional Teacher with over 10 year of Teaching Experience
+                </p>
+
+                <div class="footnote">
+                    <div class="Sched">
+                        <img src="img/Cale.png" alt="">
+                        <span>Available Every Tuesday 16:30</span>
+                    </div>
+                    <div class="Sched1">
+                        <button>Book Now!</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="cardTeach">
+                <div class="circle">
+                    <img src="https://wallpapercave.com/wp/wp10255862.png" alt="">
+                </div>
+                <span class="name">
+                    Rio Atamosa
+                </span>
+                <span class="pos">English Tutor</span>
+                <p class="content">
+                    Licensed Professional Teacher with over 10 year of Teaching Experience
+                </p>
+
+                <div class="footnote">
+                    <div class="Sched">
+                        <img src="img/Cale.png" alt="">
+                        <span>Available Every Tuesday 16:30</span>
+                    </div>
+                    <div class="Sched1">
+                        <button>Book Now!</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <hr>
+    <!-- Start of the Footer -->
+    <footer style="margin-top: 20px;">
+        <div class="footer-wrap">
+            <div class="widgetFooter" id="footerLogo">
+                <img src="img/KTEL-logo-removebg-preview.png" alt="Logo">
+            </div>
+            <div class="widgetFooter">
+
+                <h4 class="uppercase">useful links</h4>
+                <ul id="footerUsefulLink">
+                    <li title="About US">
+
+                        <a>&nbsp;About us</a>
+                    </li>
+                    <li title="Servicers">
+
+                        <a>&nbsp;Services</a>
+                    </li>
+                    <li title="Works">
+
+                        <a>&nbsp;How It Works</a>
+                    </li>
+                    <li title="Teachers">
+
+                        <a>&nbsp;Our Teachers</a>
+                    </li>
+                    <li title="Contact Us">
+
+                        <a>&nbsp;Contact us</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="widgetFooter">
+                <h4 class="uppercase">Social media links</h4>
+                <ul id="footerMediaLinks">
+                    <li class="media1" title="Facebook">
+                        <span class="mediaLinksIcons fb">
+                            <i class="fab fa-facebook-square"></i>
+                        </span>
+                        <a class="fb">&nbsp;facebook</a>
+                    </li>
+                    <li class="media2" title="Twitter">
+                        <span class="mediaLinksIcons twit">
+                            <i class="fab fa-twitter-square"></i>
+                        </span>
+                        <a class="twit">&nbsp;Twitter</a>
+                    </li>
+                    <li class="media3" title="Instagram">
+                        <span class="mediaLinksIcons insta">
+                            <i class="fab fa-instagram"></i>
+                        </span>
+                        <a class="insta">&nbsp;instagram</a>
+                    </li>
+                    <li class="media4" title="Github">
+                        <span class="mediaLinksIcons git">
+                            <i class="fab fa-github-alt"></i>
+                        </span>
+                        <a class="git">&nbsp;Github</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footerCopy">
+            <div class="inb">
+                <p>@ 2023 KidsTalk E-Learning<sup></sup>.All Right Reserved. </p>
+            </div>
+        </div>
+    </footer>
+    <!-- End of the Footer -->
+    <script>
+        const navSlide = () => {
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('.nav-links');
+            const navLinks = document.querySelectorAll('nav .nav-links li');
+
+            burger.addEventListener('click', () => {
+                nav.classList.toggle('nav-active');
+                navLinks.forEach((links, index) => {
+                    if (links.style.animation) { links.style.animation = '' }
+                    else {
+                        links.style.animation = `navLinksFade 0.5s ease forwards ${index / 5}s`
+                    }
+                });
+                burger.classList.toggle('toggle');
+            });
+        }
+        navSlide();
+    </script>
+</body>
+
+
+</html>
