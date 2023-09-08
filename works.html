@@ -29,6 +29,133 @@
             text-align: center;
         }
 
+        #some-box {
+            background: #fff;
+            padding: 40px 0px 80px;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+
+        article.row {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 45px 0;
+        }
+
+        article.row button {
+            height: 30px;
+            border-radius: 20px;
+            width: 150px;
+            color: whitesmoke;
+            border: none;
+            background-color: rgba(51, 71, 255, 1);
+            margin-top: 15px;
+        }
+
+        article.row button:hover {
+            background-color: rgba(216, 29, 65, 1);
+            cursor: pointer;
+        }
+
+        article.row h3 {
+            color: rgba(0, 97, 10, 1);
+        }
+
+        article.row div {
+            width: 49.4%;
+            display: inline-block;
+            position: relative;
+            border: 1px solid white;
+        }
+
+
+        #idea-one p{
+            margin-left: -30px;
+        }
+        #idea-two p{
+            margin-left: 250px;
+
+        }
+        #idea-three p{
+            margin-left: -30px;
+        }
+
+        #idea-one img{
+            position: absolute;
+            bottom: -90px;
+            width: 250px;
+            left: 240px;
+        }
+
+
+        #idea-two img{
+            position: absolute;
+            bottom: -100px;
+            width: 250px;
+            left: 80px;
+        }
+
+        #idea-three img{
+            position: absolute;
+            bottom: -120px;
+            width: 260px;
+            left: 240px;
+        }
+        .book{
+            background-color: red;
+            border: none;
+            width: 100px;
+            height: 30px;
+            border-radius: 5px;
+        }
+        .booking{
+            margin-left: 390px;
+        }
+
+
+        @media(max-width:750px) {
+
+            article.row div {
+                min-width: 300px;
+                width: 90%;
+                margin: 0 5%;
+                text-align: center;
+                display: block;
+            }
+
+            /* Center your text */
+            #some-other-box h3 {
+                text-align: center;
+            }
+
+            /* Center your image */
+            #idea-one img,
+            #idea-two img,
+            #idea-three img {
+                position: relative;
+                margin: auto;
+                left: inherit;
+                bottom: inherit;
+                height: 100px;
+            }
+
+            #idea-two {
+                display: -webkit-box;
+                display: -moz-box;
+                display: box;
+                -webkit-box-orient: vertical;
+                -moz-box-orient: vertical;
+                box-orient: vertical;
+            }
+
+
+            #idea-two div:first-of-type {
+                -webkit-box-ordinal-group: 2;
+                -moz-box-ordinal-group: 2;
+                box-ordinal-group: 2;
+            }
+
        
     </style>
 </head>
@@ -89,7 +216,47 @@
                     style="color: rgba(105, 62, 151, 1)">E-Learning</b></h1>
             <p> Let your Kids learn with us!</p>
         </div>
+        <div id="some-box">
 
+
+            <article class="row" id="idea-one">
+
+                <div class="sidePic"><img src="./img/work1.png" /></div>
+                <div>
+                    <p>&nbsp;&nbsp;&nbsp;✔️ Select course
+                        <br> &nbsp;&nbsp;&nbsp;✔️ Subscribe to offered packages
+                        <br> &nbsp;&nbsp;&nbsp;✔️ Book  a language tutorial services
+                        <br> &nbsp;&nbsp;&nbsp;✔️ Book  other services
+                    </p>
+                </div>
+            </article><br><br><br><br><br>
+
+            <article class="row" id="idea-two">
+                <div>
+                    <p>&nbsp;&nbsp;&nbsp;✔️Take the quizzes 
+                        <br> &nbsp;&nbsp;&nbsp;✔️Pass the quizzes inserted every each topic in a package 
+                    </p>
+                </div>
+                <div class="sidePic"><img src="./img/work2.png" /></div>
+            </article><br><br><br><br><br>
+
+            <article class="row" id="idea-three">
+
+                <div class="sidePic"><img src="./img/work3.png" /></div>
+                <div>
+                    <p>&nbsp;&nbsp;&nbsp;✔️ Pay services
+                        <br> &nbsp;&nbsp;&nbsp;✔️ Complete the course and sessions
+                        <br> &nbsp;&nbsp;&nbsp;✔️ Received your certificate
+                    </p>
+                </div>
+            </article>
+
+        </div>
+        <div class="booking">
+            <h1><b>Try our 50% free packages now!</b></h1>
+            <button class="book">Book Now!</button>
+            <br>
+        </div>
      
     </section>
 
